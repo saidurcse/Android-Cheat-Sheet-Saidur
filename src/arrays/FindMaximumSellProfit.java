@@ -1,6 +1,4 @@
 package arrays;
-
-
 import com.sun.tools.javac.util.Pair;
 
 public class FindMaximumSellProfit {
@@ -18,7 +16,8 @@ public class FindMaximumSellProfit {
      *
      * */
     /*
-    *https://www.educative.io/m/find-maximum-single-sell-profit
+    * Explanation 
+    * https://www.educative.io/m/find-maximum-single-sell-profit
     */
 
     public static int findMaximumProfit(int[] stockPrices) {
