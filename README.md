@@ -1,7 +1,7 @@
 # Android-Cheat-sheet
 Cheat Sheet for Android Interviews
 
-# Main Contributors
+## Main Contributors
 https://github.com/anitaa1990/Android-Cheat-sheet
 
 ## Topics
