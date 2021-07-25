@@ -17,7 +17,9 @@ public class FindMaximumSellProfit {
      * Eg: 2 - For price array - {100, 80, 70, 65, 60, 55, 50}, maximum profit that could be earned is 0.
      *
      * */
-
+    /*
+    *https://www.educative.io/m/find-maximum-single-sell-profit
+    */
 
     public static int findMaximumProfit(int[] stockPrices) {
         int minimumPrice = Integer.MAX_VALUE;
@@ -37,24 +39,6 @@ public class FindMaximumSellProfit {
 
         return maxProfit;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static Pair<Integer, Integer> findMaximumSellProfit(int length, int[] arr) {
         int currentBuy = arr[0];
@@ -81,10 +65,6 @@ public class FindMaximumSellProfit {
         int optimalSellPrice = globalSell;
         return Pair.of(optimalBuyPrice, optimalSellPrice) ;
     }
-
-
-
-
 
     public static void main(String[] args) {
         int[] arr = {100, 80, 120, 130, 70, 60, 100, 125};
