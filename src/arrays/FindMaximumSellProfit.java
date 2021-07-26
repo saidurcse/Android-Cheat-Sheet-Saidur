@@ -17,7 +17,7 @@ public class FindMaximumSellProfit {
      * */
     /*
     * Explanation 
-    * https://www.educative.io/m/find-maximum-single-sell-profit
+    * https://www.educative.io/m/find-maximum-single-sell-profit  https://www.codingninjas.com/blog/2020/09/17/a-quick-look-at-kadanes-algorithm/
     */
 
     public static int findMaximumProfit(int[] stockPrices) {
