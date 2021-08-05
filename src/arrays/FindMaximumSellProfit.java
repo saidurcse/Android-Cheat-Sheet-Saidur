@@ -17,6 +17,7 @@ public class FindMaximumSellProfit {
      * */
     /*
     * Explanation 
+    * https://www.geeksforgeeks.org/stock-buy-sell/
     * https://www.educative.io/m/find-maximum-single-sell-profit
     * https://www.youtube.com/watch?v=YxuK6A3SvTs
     * https://www.codingninjas.com/blog/2020/09/17/a-quick-look-at-kadanes-algorithm/
