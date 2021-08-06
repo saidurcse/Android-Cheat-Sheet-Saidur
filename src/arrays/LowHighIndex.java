@@ -1,4 +1,4 @@
-package arrays;
+import java.io.*;
 
 public class LowHighIndex {
 
