@@ -26,7 +26,6 @@ public class LowHighIndex {
             if(arr[i] == key) {
                 if(i < lowestIndex) {
                     lowestIndex = i;
-
                 }
                 if(i > highestIndex) {
                     highestIndex = i;
