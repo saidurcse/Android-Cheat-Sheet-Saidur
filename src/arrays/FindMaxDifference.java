@@ -1,5 +1,5 @@
-package arrays;
-
+import java.io.*;
+import java.util.*;
 
 public class FindMaxDifference {
 
