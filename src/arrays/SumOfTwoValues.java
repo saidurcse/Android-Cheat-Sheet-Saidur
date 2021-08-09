@@ -1,5 +1,5 @@
-package arrays;
-
+import java.io.*;
+import java.util.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,6 +17,7 @@ public class SumOfTwoValues {
      *          eg: if value = 10 & current element arr[0] = 5, check if 10-5 is present in the set.
      *  Step 3: If not, add the current element to the set
      * */
+	
     public static void findSumOfTwoValues(int []arr, int value) {
 
         Set<Integer> map = new HashSet<>();
@@ -35,3 +36,5 @@ public class SumOfTwoValues {
         findSumOfTwoValues(arr, 14);
     }
 }
+
+/* Output: 5 9 */
