@@ -1,4 +1,4 @@
-package arrays;
+import java.io.*;
 import com.sun.tools.javac.util.Pair;
 
 public class FindMaximumSellProfit {
@@ -75,6 +75,10 @@ public class FindMaximumSellProfit {
     }
 }
 
+/* Output: 
+* Pair[60,125]
+* 65 
+*/
 
 /*import java.io.*;
 import java.util.*;
@@ -121,3 +125,5 @@ class BuyStock {
         System.out.print(maxProfit(prices));
     }
 }*/
+
+/* Output: 5 */
