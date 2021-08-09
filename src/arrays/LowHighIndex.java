@@ -39,3 +39,5 @@ public class LowHighIndex {
         findLowestHighestIndex(arr, 5);
     }
 }
+
+/* Output: 2 9 */
