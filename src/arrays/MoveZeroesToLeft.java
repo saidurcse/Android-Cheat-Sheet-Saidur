@@ -1,6 +1,5 @@
-package arrays;
-
-
+import java.io.*;
+import java.util.*;
 import java.util.Arrays;
 
 public class MoveZeroesToLeft {
@@ -9,7 +8,6 @@ public class MoveZeroesToLeft {
      * Given an integer array, move all elements containing '0' to the left while maintaining the order of
      * other elements in the array.
      * */
-
 
     /*
      * Runtime Complexity = Linear, O(n).
@@ -43,7 +41,6 @@ public class MoveZeroesToLeft {
     }
 
 
-
     /*
      * Given an integer array, move all elements containing '0' to the right while maintaining the order of
      * other elements in the array.
@@ -74,3 +71,8 @@ public class MoveZeroesToLeft {
         System.out.println(Arrays.toString(moveZeroesToRight(arr)));
     }
 }
+
+/*
+* [0, 0, 0, 1, 10, 20, 59, 63, 88]
+* [1, 10, 20, 59, 63, 88, 0, 0, 0]
+*/
