@@ -1,15 +1,14 @@
-package arrays;
-
+import java.io.*;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class RotateArray {
 
-
-    public static List<Integer> rotateArray(List<Integer> arr, int rotations) {
+public static List<Integer> rotateArray(List<Integer> arr, int rotations) {
         int length = arr.size();
-        rotations = rotations % length;
+        rotations = rotations % length; // 2
         if(rotations < 0) {
             rotations = rotations+length;
         }
@@ -19,7 +18,7 @@ public class RotateArray {
          * For eg: if rotation = 2, the copy last 2 values into temp array
          * */
         List<Integer> tempList = new ArrayList<>();
-        for(int i=(length-rotations); i<length; i++) {
+        for(int i=(length-rotations); i<length; i++) { // i=3
             tempList.add(arr.get(i));
         }
 
@@ -44,3 +43,6 @@ public class RotateArray {
         System.out.println(rotateArray(Arrays.asList(arr1), 2));
     }
 }
+
+
+/* Output: [4, 5, 1, 2, 3] */
