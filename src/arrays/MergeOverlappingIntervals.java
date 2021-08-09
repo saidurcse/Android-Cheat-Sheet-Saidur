@@ -86,4 +86,4 @@ public class MergeOverlappingIntervals {
     }
 }
 
-/* Output: 10, 15 */
+/* Output: 10 15 */
