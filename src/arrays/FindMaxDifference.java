@@ -14,6 +14,7 @@ public class FindMaxDifference {
      *  Step 4) If it is greater, then get the difference between the two values & check if the difference > max difference (b). If the difference is > set this diff as max difference
      *  Step 5) If it is less than minValue, set this value as minValue
      * */
+    
     public static int findMaxDistance(int[] arr) {
 
         if(arr.length == 1) return arr[0];
