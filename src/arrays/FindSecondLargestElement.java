@@ -1,5 +1,5 @@
-package arrays;
-
+import java.io.*;
+import java.util.*;
 
 public class FindSecondLargestElement {
 
@@ -8,6 +8,7 @@ public class FindSecondLargestElement {
      * Input: {2, 3, 10, 6, 4, 8, 1}
      * Output: 8
      * */
+    
     public static int findSecondHighestNo(int[] arr) {
         if(arr.length < 2) return -1;
 
@@ -26,9 +27,10 @@ public class FindSecondLargestElement {
         return second;
     }
 
-
     public static void main(String[] args) {
         int[] arr = {2, 3, 10, 6, 4, 8, 1};
         System.out.println(findSecondHighestNo(arr));
     }
 }
+
+/* Output: 8 */
