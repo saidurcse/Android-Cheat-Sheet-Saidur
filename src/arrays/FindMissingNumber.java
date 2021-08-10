@@ -1,7 +1,8 @@
 package arrays;
 
 public class FindMissingNumber {
-	/*
+	
+     /*
      * Find missing numbers from an array
      * */
 	
@@ -20,6 +21,5 @@ public class FindMissingNumber {
         System.out.println(findMissingNumbers(arr, arr.length));
     }
 }
-
 
 /* Output: 5 */
