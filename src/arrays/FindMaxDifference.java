@@ -41,3 +41,5 @@ public class FindMaxDifference {
         System.out.println(findMaxDistance(arr));
     }
 }
+
+/* Output: 8 */
