@@ -1,9 +1,10 @@
-package dynamicprogramming;
-
+import java.io.*;
+import java.util.*;
 
 public class CoinChangingProblem {
 
     /*
+     *
      * Given coin denominations and the total amount, find out the number​ of ways to make the change.
      * Denominations: 1, 2, 5
      * Amount: 7
@@ -24,11 +25,10 @@ public class CoinChangingProblem {
      * problems and they can be solved to find final solution and it also satisfies the property of
      * overlapping sub problems i.e. previously solved sub problem results can be used multiple times.
      *
-     *
      * */
+	
     protected static int solveCoinChangeDp(int[] denominations,
                                            int amount) {
-
 
         int[] solution = new int[amount + 1];
         solution[0] = 1;
@@ -38,12 +38,14 @@ public class CoinChangingProblem {
                 solution[i] += solution[i - den];
             }
         }
+        
         return solution[solution.length - 1];
     }
 
-
     public static void main(String[] args) {
         int[] denominations = new int[]{1, 5, 10};
-        System.out.println("Combinations (DP): " + solveCoinChangeDp(denominations, 356));
+        System.out.println("Combinations (DP): " + solveCoinChangeDp(denominations, 356)); // amount = 7,  Combinations (DP): 2
     }
 }
+
+/* Output: Combinations (DP): 1332 */
