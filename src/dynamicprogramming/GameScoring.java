@@ -1,4 +1,5 @@
-package dynamicprogramming;
+import java.io.*;
+import java.util.*;
 
 public class GameScoring {
 
@@ -20,8 +21,8 @@ public class GameScoring {
      *
      * The scoring options are 1, 2, 4. To find the number of ways a player can score 'n' runs,
      * the recurrence relation is as follows:
-     * S(n) = S(n-1) + S(n-2) + S(n-4)S(n)=S(n−1)+S(n−2)+S(n−4)
-     *
+     * S(n) = S(n-1) + S(n-2) + S(n-4)
+     * S(n) = S(n−1) + S(n−2) + S(n−4)
      *
      * */
 
@@ -47,7 +48,6 @@ public class GameScoring {
         scoringOptionsRec(n, result);
         return result[n];
     }
-
 
     public static void main(String[] args) {
         System.out.println( "Scoring Options(4): "+ scoringOptions(4)); //6
