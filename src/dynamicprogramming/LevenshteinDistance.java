@@ -1,4 +1,5 @@
-package dynamicprogramming;
+import java.io.*;
+import java.util.*;
 
 public class LevenshteinDistance {
 
@@ -93,3 +94,17 @@ public class LevenshteinDistance {
         System.out.println(computeLevenshteinDistance("min", "max"));
     }
 }
+
+/* Output:
+* 0
+* 4
+* 6
+* 0
+* 1
+* 3
+* 1
+* 3
+* 7
+* 5
+* 2 
+* */
