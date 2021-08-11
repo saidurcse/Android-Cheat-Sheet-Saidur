@@ -1,9 +1,9 @@
-package dynamicprogramming;
-
+import java.io.*;
+import java.util.*;
 
 public class LargestSumSubarray {
-
-    /*
+   
+	/*
      * Given an array, find the contiguous subarray with the largest sum.
      * Input: -4, 2,-5,1,2,3,6,-5,1
      * Output: the largest sum subarray starts at index 3 and ends at 6 and the largest sum is 12
@@ -18,6 +18,7 @@ public class LargestSumSubarray {
      * subarray ending there.
      * This is achieved by keeping a current maximum for the current array index and a global maximum.
      * */
+	
     public static int getLargestSumFromArray(int[] arr) {
         int maxSoFar = 0;
         int maxAtEnd = 0;
@@ -30,10 +31,10 @@ public class LargestSumSubarray {
         return maxAtEnd;
     }
 
-
-
     public static void main(String[] args) {
         int[] arr = {-4, 2, -5, 1, 2, 3, 6, -5, 1};
         System.out.println(getLargestSumFromArray(arr));
     }
 }
+
+/* Output: 12 */
