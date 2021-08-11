@@ -1,9 +1,7 @@
-package dynamicprogramming;
+import java.io.*;
+import java.util.*;
 
-import java.util.Arrays;
-
-public class FibonacciSeries {
-
+public class Solution {
 
     /*
      * Find the nth fibonacci number.
@@ -29,10 +27,10 @@ public class FibonacciSeries {
         return result;
     }
 
-
-
     public static void main(String[] args) {
         int n = 10;
         System.out.println(Arrays.toString(getFibonacciNumbers(n)));
     }
 }
+
+/* Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] */
