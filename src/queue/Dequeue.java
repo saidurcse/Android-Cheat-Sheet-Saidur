@@ -1,5 +1,5 @@
-package queue;
-
+import java.io.*;
+import java.util.*;
 import java.util.ArrayDeque;
 
 public class Dequeue {
@@ -9,7 +9,6 @@ public class Dequeue {
      * Given a large array of integers and a window of size 'w',
      * find the current maximum in the window as the window slides through the entire array.
      * */
-
 
     /*
      * Eg: {-4, 2, -5, 3, 6}
@@ -25,7 +24,6 @@ public class Dequeue {
      * Memory Complexity - O(w) - where 'w' is the window size.
      * */
 
-
     /*
      * Why are we using ArrayDeque:
      * An ArrayDeque allows us to add or remove an element from both sides.
@@ -36,7 +34,6 @@ public class Dequeue {
      * linked list is expensive: because it uses memory to hold objects and to contain ‘links’ that point
      * to other objects (which slows down iteration)
      * */
-
 
     public static void findMaximumSlidingWindow(int[] arr,
                                                 int windowSize) {
@@ -69,9 +66,10 @@ public class Dequeue {
         }
     }
 
-
     public static void main(String[] args) {
         int[] arr = {12, 1, 78, 90, 57, 89, 56};
         findMaximumSlidingWindow(arr, 3);
     }
 }
+
+/* Output: 78 90 90 90 89 */
