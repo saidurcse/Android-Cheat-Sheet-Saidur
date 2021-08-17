@@ -1,5 +1,6 @@
-package linkedlist;
-
+import java.io.*;
+import java.util.*;
+import java.util.ArrayDeque;
 
 public class ReverseLinkedList {
 
@@ -16,21 +17,21 @@ public class ReverseLinkedList {
     private static class LinkedList {
 
         private LinkedList.Node head;
+        
         public Node reverse(Node node) {
             Node previous = null;
             Node current = node;
             Node next = null;
 
-            while (current != null) {
-                next = current.next;
-                current.next = previous;
-                previous = current;
+            while (current != null) { // Swapping
+                next = current.next; 
+                current.next = previous; 
+                previous = current; 
                 current = next;
             }
             node = previous;
             return node;
         }
-
 
         public void printList(Node node) {
             while (node != null) {
@@ -51,7 +52,6 @@ public class ReverseLinkedList {
         }
     }
 
-
     public static void main(String [] args) {
 
         LinkedList linkedList = new LinkedList();
@@ -66,3 +66,9 @@ public class ReverseLinkedList {
         linkedList.printList(linkedList.head);
     }
 }
+
+
+/* Output: 
+ * 1 2 3 4
+ * 4 3 2 1
+ */
