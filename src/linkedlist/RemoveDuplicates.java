@@ -1,9 +1,7 @@
-package linkedlist;
-
-import java.util.HashSet;
+import java.io.*;
+import java.util.*;
 
 public class RemoveDuplicates {
-
 
     /*
      * Use hashset!!
@@ -17,6 +15,7 @@ public class RemoveDuplicates {
     public static class LinkedList {
 
         private Node head;
+        
         public Node removeDuplicates(Node head) {
             Node currentNode = head;
 
@@ -26,7 +25,6 @@ public class RemoveDuplicates {
             while (currentNode.next != null) {
                 if(hashSet.contains(currentNode.next.data)) {
                     currentNode.next = currentNode.next.next;
-
                 } else {
                     hashSet.add(currentNode.next.data);
                     currentNode = currentNode.next;
@@ -70,3 +68,9 @@ public class RemoveDuplicates {
         linkedList.print(linkedList.head);
     }
 }
+
+
+/* Output: 
+ * 1 1 3 2 3 1 
+ * 1 3 2
+ */
