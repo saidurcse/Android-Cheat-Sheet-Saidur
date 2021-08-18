@@ -1,7 +1,7 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class CheckIfContainsCycle {
-
 
     public static boolean isCyclic(LinkedList linkedList) {
         LinkedList.Node fast = linkedList.head();
@@ -12,7 +12,7 @@ public class CheckIfContainsCycle {
             slow = slow.next();
 
             if (fast == slow) {
-                return true;
+                return true; //301
             }
         }
         return false;
@@ -85,3 +85,6 @@ public class CheckIfContainsCycle {
         System.out.println(isCyclic(linkedList));
     }
 }
+
+
+/* Output: true */
