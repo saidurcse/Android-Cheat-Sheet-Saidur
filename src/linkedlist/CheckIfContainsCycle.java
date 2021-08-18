@@ -84,11 +84,11 @@ public class CheckIfContainsCycle {
                                           //         next[data = 301, 
                                           //         next[data = 401, 
                                           //         next[data = 201,                                  
-        								  //         next[data = 301,
-										  //         next[data = 401,
-										  //         next[data = 201,
-										  //         next[data = 301,
-										  //         next[data = 401,...
+        				  //         next[data = 301,
+					  //         next[data = 401,
+					  //         next[data = 201,
+					  //         next[data = 301,
+					  //         next[data = 401,...
 
         System.out.println(isCyclic(linkedList));
     }
