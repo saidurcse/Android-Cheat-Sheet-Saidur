@@ -1,12 +1,14 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class FindMiddleNode {
-
 
     /*
      * Find middle node of linked list in Java in one pass
      * */
+	
     public static LinkedList.Node findMiddleNode(LinkedList linkedList) {
+    	
         LinkedList.Node current = linkedList.head();
         LinkedList.Node middle = linkedList.head();
 
@@ -47,6 +49,7 @@ public class FindMiddleNode {
         }
 
         public static class Node {
+        	
             private Node next;
             private String data;
             public Node(String data) {
@@ -83,3 +86,5 @@ public class FindMiddleNode {
         System.out.println(findMiddleNode(linkedList).data());
     }
 }
+
+/* Output: 2 */
