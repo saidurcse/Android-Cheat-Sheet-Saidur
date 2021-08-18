@@ -80,7 +80,15 @@ public class CheckIfContainsCycle {
         linkedList.appendIntoTail(cycle);
         linkedList.appendIntoTail(new LinkedList.Node("301"));
         linkedList.appendIntoTail(new LinkedList.Node("401"));
-        linkedList.appendIntoTail(cycle);
+        linkedList.appendIntoTail(cycle); //   cycle [data = 201, 
+                                          //         next[data = 301, 
+                                          //         next[data = 401, 
+                                          //         next[data = 201,                                  
+        								  //         next[data = 301,
+										  //         next[data = 401,
+										  //         next[data = 201,
+										  //         next[data = 301,
+										  //         next[data = 401,...
 
         System.out.println(isCyclic(linkedList));
     }
