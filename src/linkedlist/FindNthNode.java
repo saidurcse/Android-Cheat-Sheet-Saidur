@@ -1,9 +1,10 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class FindNthNode {
 
-
     public static LinkedList.Node findNthNode(LinkedList linkedList, int n) {
+		
         LinkedList.Node fast = linkedList.head();
         LinkedList.Node slow = linkedList.head();
 
@@ -75,3 +76,6 @@ public class FindNthNode {
         System.out.println(findNthNode(linkedList, 2).data());
     }
 }
+
+
+/* Output: 3 */
