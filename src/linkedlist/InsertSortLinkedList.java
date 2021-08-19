@@ -1,8 +1,7 @@
-package linkedlist;
-
+import java.io.*;
+import java.util.*;
 
 public class InsertSortLinkedList {
-
 
     /*
      * Given head pointer of a linked list, sort the linked list (in ascending order) using insertion sort
@@ -46,7 +45,6 @@ public class InsertSortLinkedList {
         return head;
     }
 
-
     public static LinkedList.Node insertionSort(LinkedList.Node head) {
 
         LinkedList.Node sorted = null;
@@ -54,13 +52,12 @@ public class InsertSortLinkedList {
 
         while (curr != null) {
             LinkedList.Node temp = curr.next;
-            sorted = sortedInsert(sorted, curr);
+            sorted = sortedInsert(sorted, curr); // curr = 3 1 5 4 9 0 
             curr = temp;
         }
 
         return sorted;
     }
-
 
     private static class LinkedList {
 
@@ -114,7 +111,6 @@ public class InsertSortLinkedList {
         }
     }
 
-
     public static void main(String[] args) {
 
         LinkedList linkedList = new LinkedList(3);
@@ -128,7 +124,15 @@ public class InsertSortLinkedList {
         linkedList.printNode(linkedList.head);
         linkedList.head = insertionSort(linkedList.head);
 
+        System.out.println();
         System.out.println("Sorted: ");
         linkedList.printNode(linkedList.head);
     }
 }
+
+/* Output: 
+ * Original: 
+ * 3 1 5 4 9 0 
+ * Sorted: 
+ * 0 1 3 4 5 9
+ */
