@@ -1,18 +1,18 @@
-package linkedlist;
-
+import java.io.*;
+import java.util.*;
 
 public class IntersectionPoints {
-
 
     /*
      * Given head nodes of two linked lists that may or may not intersect,
      * find out if they intersect and return the point of intersection;
      * return null otherwise.
-     * Eg: Input:  29 -> 23 -> 82 -> 11, 12, 17
+     * Eg: Input:  29 -> 23 -> 82 -> 11-> 12-> 17
      *             13 -> 4 -> 12 -> 17
      *     Output: 12
      *
      * */
+	
     public static class LinkedList {
 
         public static Node head1, head2;
@@ -30,6 +30,7 @@ public class IntersectionPoints {
 
         /*function to get the intersection point of two linked
         lists head1 and head2 */
+        
         int getNode() {
             int c1 = getCount(head1);
             int c2 = getCount(head2);
@@ -47,6 +48,7 @@ public class IntersectionPoints {
         /* function to get the intersection point of two linked
          lists head1 and head2 where head1 has d more nodes than
          head2 */
+        
         private int getIntersectionNode(int d, Node node1, Node node2) {
             int i;
             Node current1 = node1;
@@ -70,6 +72,7 @@ public class IntersectionPoints {
 
         /*Takes head pointer of the linked list and
         returns the count of nodes in the list */
+        
         private int getCount(Node node) {
             Node current = node;
             int count = 0;
@@ -78,22 +81,19 @@ public class IntersectionPoints {
                 count++;
                 current = current.next;
             }
-
+            
             return count;
         }
     }
 
-
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-
 
         list.head1 = new LinkedList.Node(3);
         list.head1.next = new LinkedList.Node(6);
         list.head1.next.next = new LinkedList.Node(15);
         list.head1.next.next.next = new LinkedList.Node(15);
         list.head1.next.next.next.next = new LinkedList.Node(30);
-
 
         list.head2 = new LinkedList.Node(10);
         list.head2.next = new LinkedList.Node(15);
@@ -104,6 +104,4 @@ public class IntersectionPoints {
     }
 }
 
-
-
-
+/* Output: The node of intersection is 15 */
