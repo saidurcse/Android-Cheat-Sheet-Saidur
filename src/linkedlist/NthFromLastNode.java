@@ -1,9 +1,9 @@
-package linkedlist;
-
+import java.io.*;
+import java.util.*;
 
 public class NthFromLastNode {
 
-    /*
+	 /*
      * Given a singly linked list, return nth from last node. Return null if 'n' is out-of-bounds.
      * Eg: Input:  67, 9, 72, 94, 13, 59, 55, 72, 66, 22
      *     Output: Result for n=5 is 59
@@ -73,7 +73,6 @@ public class NthFromLastNode {
             head = new_node;
         }
 
-
        public class Node {
             int data;
             Node next;
@@ -85,7 +84,6 @@ public class NthFromLastNode {
         }
     }
 
-
     public static void main(String[] args) {
         LinkedList llist = new LinkedList();
         llist.push(20);
@@ -96,3 +94,5 @@ public class NthFromLastNode {
         llist.printNthFromLast(4);
     }
 }
+
+/* Output: Node no. 4 from last is 35 */
