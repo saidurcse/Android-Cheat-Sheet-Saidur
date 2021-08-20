@@ -1,8 +1,9 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class MergeLinkedList {
 
-    /*
+	/*
      * Given two sorted linked lists, merge them such that resulting linked list is also sorted.
      * Input: List1: 4, 8, 15, 19        List2: 7, 9, 10, 16
      * Output:  4, 7, 8, 9, 10, 15, 16, 19
@@ -16,8 +17,8 @@ public class MergeLinkedList {
      * Memory complexity:
      * Constant, O(1)
      *
-     *
      * */
+	
     public static LinkedList.Node mergeSorted(LinkedList.Node head1,
                                               LinkedList.Node head2) {
 
@@ -28,7 +29,6 @@ public class MergeLinkedList {
         } else if (head2 == null) {
             return head1;
         }
-
 
         LinkedList.Node mergedHead = null;
         if (head1.data <= head2.data) {
@@ -64,10 +64,7 @@ public class MergeLinkedList {
         return mergedHead;
     }
 
-
-
     public static class LinkedList {
-
         private Node head;
 
         public Node head() {
@@ -123,14 +120,12 @@ public class MergeLinkedList {
         }
     }
 
-
     public static void main(String[] args) {
         LinkedList linkedList1 = new LinkedList();
         linkedList1.push(4);
         linkedList1.push(8);
         linkedList1.push(15);
         linkedList1.push(19);
-
 
         LinkedList linkedList2 = new LinkedList();
         linkedList2.push(7);
@@ -150,3 +145,11 @@ public class MergeLinkedList {
         linkedList2.printNode(mergedList);
     }
 }
+
+/* Output: 
+ *  List 1: 
+ * 4 8 15 19 
+ * List 2: 
+ * 7 9 10 16 
+ * 4 7 8 9 10 15 16 19  
+ */
