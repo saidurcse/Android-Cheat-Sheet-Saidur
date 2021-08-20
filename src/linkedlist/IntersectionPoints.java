@@ -14,7 +14,6 @@ public class IntersectionPoints {
      * */
 	
     public static class LinkedList {
-
         public static Node head1, head2;
 
         static class Node {
@@ -53,7 +52,7 @@ public class IntersectionPoints {
             int i;
             Node current1 = node1;
             Node current2 = node2;
-            for (i = 0; i < d; i++) {
+            for (i = 0; i < d; i++) { //3,6
                 if (current1 == null) {
                     return -1;
                 }
@@ -100,7 +99,6 @@ public class IntersectionPoints {
         list.head2.next.next = new LinkedList.Node(30);
 
         System.out.println("The node of intersection is " + list.getNode());
-
     }
 }
 
