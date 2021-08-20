@@ -1,8 +1,7 @@
-package linkedlist;
-
+import java.io.*;
+import java.util.*;
 
 public class SwapNthNodeWithHead {
-
 
     /*
      * Given the head of a singly linked list and 'N', swap the head with Nth node. Return the head of the new linked list.
@@ -12,7 +11,7 @@ public class SwapNthNodeWithHead {
      * Output: Swapping 5th Node with Head
      *
      * */
-
+    
     /*
      * Runtime Complexity:
      * Linear, O(n).
@@ -25,6 +24,7 @@ public class SwapNthNodeWithHead {
      * 'prev' follows current and will be pointing to (N-1)th node.
      *  Return current as the new head of the linked list.
      * */
+	
     public static LinkedList.Node swapNthNode(LinkedList.Node head, int n) {
         LinkedList.Node prev = null;
         LinkedList.Node current = head;
@@ -41,8 +41,8 @@ public class SwapNthNodeWithHead {
         for (int count = 1;
              current != null && count < n;
              ++count) {
-            prev = current;
-            current = current.next;
+            prev = current; // prev = 1,2
+            current = current.next; // current = 3,4,5
         }
 
         if (current == null) {
@@ -61,7 +61,6 @@ public class SwapNthNodeWithHead {
     }
 
     public static class LinkedList {
-
         private Node head;
 
         public Node head() {
@@ -117,7 +116,6 @@ public class SwapNthNodeWithHead {
         }
     }
 
-
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList();
         linkedList.push(1);
@@ -132,3 +130,8 @@ public class SwapNthNodeWithHead {
         linkedList.printNode(linkedList.head);
     }
 }
+
+/* Output: 
+ * 1 2 3 4 5 
+ * 3 2 1 4 5 
+ */
