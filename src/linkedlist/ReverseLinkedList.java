@@ -5,6 +5,9 @@ import java.util.ArrayDeque;
 public class ReverseLinkedList {
 
     /*
+     * http://www.shafaetsplanet.com/?p=2689
+     */
+    /*
      * Runtime Complexity:
      * Linear, O(n).
      * As we can reverse the linked list in a single pass.
