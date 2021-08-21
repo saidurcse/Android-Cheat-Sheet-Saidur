@@ -1,10 +1,9 @@
-package linkedlist;
-
-
+import java.io.*;
+import java.util.*;
 
 public class MergeSortList {
 
-    /*
+	/*
      * Given head pointer of a linked sort, sort linked list (in ascending order) using merge sort
      * and return new head pointer of sorted linked list.
      * Input: List1: 29 -> 23 -> 82 -> 11
@@ -35,6 +34,7 @@ public class MergeSortList {
     // this method splits linked list in two halves by iterating over whole list
     // It returns head pointers of first and 2nd halves of linked lists in first_second
     // Head of 1st half is just the head node of linked list
+    
     private static void splitInHalf(LinkedList.Node head,
                                     Pair<LinkedList.Node, LinkedList.Node> firstSecondPair) {
 
@@ -130,12 +130,12 @@ public class MergeSortList {
 
         // Let's split the list in half, sort the sublists
         // and then merge the sorted lists.
-        splitInHalf(head, first_second);
+        splitInHalf(head, first_second); // head = 8 15 1 19 2 1 [ first_second : first = 8,15,1 second = 19,2,1 ]
 
-        first_second.first = mergeSort(first_second.first);
-        first_second.second = mergeSort(first_second.second);
+        first_second.first = mergeSort(first_second.first); // head = 8,15,1 [ first_second : first = 8,15 second = 1 ]
+        first_second.second = mergeSort(first_second.second); // head = 8,15 [ first_second : first = 8 second = 15 ]
 
-        return mergeSortedLists(first_second.first, first_second.second);
+        return mergeSortedLists(first_second.first, first_second.second); // split the input linked list into two halves and keep doing it until there is a linked list of size 1 or 0.
     }
 
 
@@ -239,3 +239,11 @@ public class MergeSortList {
         linkedList.printNode(mergedList);
     }
 }
+
+
+/* Output: 
+ * Original: 
+ * 8 15 1 19 2 1 
+ * Sorted: 
+ * 1 1 2 8 15 19  
+ */
