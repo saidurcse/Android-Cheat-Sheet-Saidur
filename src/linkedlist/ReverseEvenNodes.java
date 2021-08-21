@@ -1,4 +1,5 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class ReverseEvenNodes {
 
@@ -77,7 +78,7 @@ public class ReverseEvenNodes {
         // List_even: 4,2
         // Merged: 1,4,3,2,5
 
-        return mergeAlternating(head, list_even);
+        return mergeAlternating(head, list_even); // head = 7,21,9 list_even = 28,14
     }
 
 
@@ -138,7 +139,6 @@ public class ReverseEvenNodes {
         }
     }
 
-
     public static void main(String[] args) {
 
         LinkedList linkedList1 = new LinkedList();
@@ -156,3 +156,10 @@ public class ReverseEvenNodes {
         linkedList1.printNode(mergedList);
     }
 }
+
+
+/* Output: 
+ * List 1: 
+ * 7 14 21 28 9 
+ * 7 28 21 14 9  
+ */
