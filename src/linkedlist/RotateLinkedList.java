@@ -1,8 +1,9 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class RotateLinkedList {
 
-    /*
+	/*
      * Given head node of a singly linked list and an integer 'n', rotate linked list by 'n'.
      * Input: 1, 2, 3, 4, 5
      * After rotating by 2, output: 4, 5, 1, 2, 3
@@ -22,6 +23,7 @@ public class RotateLinkedList {
      * Start from 'x' and move to the last node of the linked list. Update next pointer of last node to point to the head node.
      * Make 'x' as the new head node. Hence 'x' is the head of linked list after performing n rotations.
      * */
+	
     private static int findLength(LinkedList.Node head) {
         int len = 0;
 
@@ -57,7 +59,7 @@ public class RotateLinkedList {
         // If n (number of rotations required) is bigger than
         // length of linked list or if n is negative then
         // we need to adjust total number of rotations needed
-        n = adjustRotationsNeeded(n, len);
+        n = adjustRotationsNeeded(n, len); // 2
 
         if (n == 0) {
             return head;
@@ -66,17 +68,17 @@ public class RotateLinkedList {
         // Find the start of rotated list.
         // If we have 1,2,3,4,5 where n = 2,
         // 4 is the start of rotated list.
-        int rotations_count = len - n - 1;
+        int rotations_count = len - n - 1; // 2
         LinkedList.Node temp = head;
 
         while (rotations_count > 0) {
             rotations_count--;
-            temp = temp.next;
+            temp = temp.next; // 3,4,5
         }
 
         // After the above loop temp will be pointing
         // to one node prior to rotation point
-        LinkedList.Node new_head = temp.next;
+        LinkedList.Node new_head = temp.next; // 4,5
 
         // Set new end of list.
         temp.next = null;
@@ -87,9 +89,9 @@ public class RotateLinkedList {
         while (temp.next != null) {
             temp = temp.next;
         }
-        temp.next = head;
+        temp.next = head; // 1,2,3
 
-        return new_head;
+        return new_head; // 4,5,1,2,3
     }
 
     protected static class LinkedList {
@@ -167,3 +169,10 @@ public class RotateLinkedList {
         linkedList1.printNode(mergedList);
     }
 }
+
+
+/* Output: 
+ * List 1: 
+ * 1 2 3 4 5 
+ * 4 5 1 2 3   
+ */
