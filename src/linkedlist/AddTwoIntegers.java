@@ -1,9 +1,9 @@
-package linkedlist;
+import java.io.*;
+import java.util.*;
 
 public class AddTwoIntegers {
 
-
-    /*
+	/*
      * Given head pointers of two linked lists where each linked list represents an integer number
      * (each node is a digit), add them and return the resulting linked list.
      * Input: List1: 1,2,3  List: 1,2
@@ -117,7 +117,6 @@ public class AddTwoIntegers {
         linkedList1.push(2);
         linkedList1.push(3);
 
-
         LinkedList linkedList2 = new LinkedList();
         linkedList2.push(1);
         linkedList2.push(2);
@@ -134,3 +133,12 @@ public class AddTwoIntegers {
         linkedList1.printNode(mergedList);
     }
 }
+
+
+/* Output: 
+ * List 1: 
+ * 1 2 3 
+ * List 2: 
+ * 1 2 
+ * 2 4 3    
+ */
