@@ -5,6 +5,9 @@ import java.util.ArrayDeque;
 public class Dequeue {
 
     /*
+     * http://www.shafaetsplanet.com/?p=2911
+     */
+    /*
      * Find Maximum in Sliding Window
      * Given a large array of integers and a window of size 'w',
      * find the current maximum in the window as the window slides through the entire array.
