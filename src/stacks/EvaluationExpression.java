@@ -7,7 +7,7 @@ public class EvaluationExpression {
     public static void main(String[] args) {
         String expression = "3 + 6 * 5 - 1 / 2.5";
         System.out.println(evaluate(convertInfixToPostfix(expression)));
-        System.out.println(evaluate(convertInfixToPostfix("100*(2+12)")));
+        //System.out.println(evaluate(convertInfixToPostfix("100*(2+12)")));
     }
 
      /*
