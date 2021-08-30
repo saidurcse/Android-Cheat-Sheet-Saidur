@@ -16,7 +16,9 @@ public class EvaluationExpression {
         System.out.println(evaluate(convertInfixToPostfix("100*(2+12)")));
     }
 
-
+     /*
+     * http://www.shafaetsplanet.com/?p=2342
+     */
     /*
      * Given an arithmetic expression, evaluate it i.e. calculate its result.
      * Input: 2+3  Output: 5
