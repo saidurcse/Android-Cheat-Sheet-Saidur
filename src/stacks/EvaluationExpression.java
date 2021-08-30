@@ -1,14 +1,8 @@
-package stacks;
-
+import java.io.*;
+import java.util.*;
 import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
-
 public class EvaluationExpression {
-
 
     public static void main(String[] args) {
         String expression = "3 + 6 * 5 - 1 / 2.5";
@@ -55,6 +49,7 @@ public class EvaluationExpression {
      *      pop the operator from the top and add it to the postfix expression
      *
      * */
+    
     public static double evaluate(List<EvalToken> tokens) {
         Stack<Double> operands = new Stack<>();
 
@@ -98,8 +93,6 @@ public class EvaluationExpression {
         return operands.peek();
     }
 
-
-
     public static List<EvalToken> convertInfixToPostfix(String expression) {
         List<EvalToken> postFix = new ArrayList<>();
 
@@ -137,7 +130,6 @@ public class EvaluationExpression {
         return postFix;
     }
 
-
     /*
      * Method to check if the character is an operator
      * */
@@ -167,7 +159,6 @@ public class EvaluationExpression {
     public static boolean isDigit(char c) {
         return c >= '0' && c<='9';
     }
-
 
     public static Pair<Double, Integer> convertStringToDouble(String s, int i) {
         int len = s.length();
@@ -203,7 +194,6 @@ public class EvaluationExpression {
     }
 }
 
-
     interface EvalToken {
         boolean isOperator();
     };
@@ -232,7 +222,6 @@ public class EvaluationExpression {
         }
     }
 
-
     class EvalTokenOperand implements EvalToken {
 
         double value;
@@ -257,3 +246,7 @@ public class EvaluationExpression {
             return false;
         }
     }
+
+/* Output: 
+ * 32.6    
+ */
