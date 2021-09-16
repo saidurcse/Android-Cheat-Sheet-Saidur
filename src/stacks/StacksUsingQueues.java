@@ -1,11 +1,8 @@
-package stacks;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-
-public class StacksUsingQueues {
-
-
+public class Solution {
 
     /*
      * Implement a stack using Queues.
@@ -25,7 +22,6 @@ public class StacksUsingQueues {
      * Memory Complexity - Linear, O(n).
      * */
 
-
     public static void main(String[] args) throws Exception {
         StackUsingQueuesWithFasterPush stackUsingQueuesWithFasterPush = new StackUsingQueuesWithFasterPush();
         stackUsingQueuesWithFasterPush.push(3);  // q1 will have 3
@@ -38,7 +34,6 @@ public class StacksUsingQueues {
         System.out.println(stackUsingQueuesWithFasterPush.pop());  // q1 will have 3,5,10, pop returns 16
         System.out.println(stackUsingQueuesWithFasterPush.queue1 + "###" + stackUsingQueuesWithFasterPush.queue2);
 
-
         StackUsingQueueWithFasterPop stackUsingQueueWithFasterPop = new StackUsingQueueWithFasterPop();
         stackUsingQueueWithFasterPop.push(3);  // q1 will have 3
         stackUsingQueueWithFasterPop.push(5);  // q1 will have 3,5
@@ -50,10 +45,7 @@ public class StacksUsingQueues {
         System.out.println(stackUsingQueueWithFasterPop.pop());  // q1 will have 3,5,10, pop returns 16
         System.out.println(stackUsingQueueWithFasterPop.queue1 + "###" + stackUsingQueueWithFasterPop.queue2);
     }
-
 }
-
-
 
 /*
  * push():  Always enqueue on queue1
@@ -64,6 +56,7 @@ public class StacksUsingQueues {
  *
  * This solution will make the push operation faster.
  * */
+
 class StackUsingQueuesWithFasterPush {
 
     Queue<Integer> queue1 = new ArrayDeque<>();
@@ -91,16 +84,12 @@ class StackUsingQueuesWithFasterPush {
         return value;
     }
 
-
     public void swapQueues() {
         Queue<Integer> queue3 = queue1;
         queue1 = queue2;
         queue2 = queue3;
     }
 }
-
-
-
 
 /*
  * This solution will make the 'pop' operation faster.
@@ -113,6 +102,7 @@ class StackUsingQueuesWithFasterPush {
  *       If stack size is 0, throw exception.
  *       Dequeue from queue1 and return.
  * */
+
 class StackUsingQueueWithFasterPop {
     Queue<Integer> queue1 = new ArrayDeque<>();
     Queue<Integer> queue2 = new ArrayDeque<>();
@@ -149,3 +139,12 @@ class StackUsingQueueWithFasterPop {
     }
 
 }
+
+/* Output: 
+ * [3, 5]###[]
+ * 16
+ * [3, 5, 10]###[]
+ * [5, 3]###[]
+ * 16
+ * [10, 5, 3]###[] 
+ */
