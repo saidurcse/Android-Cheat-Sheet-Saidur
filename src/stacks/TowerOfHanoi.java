@@ -1,12 +1,10 @@
-package stacks;
-
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class TowerOfHanoi {
 
-
-    /*
+     /*
      * The Tower of Hanoi is a mathematical game or puzzle.
      * It consists of three rods, and a number of disks of different sizes which can slide onto any rod.
      * The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
@@ -40,9 +38,27 @@ public class TowerOfHanoi {
         }
     }
 
-
     public static void main(String args[]) {
         int n = 4; // Number of disks
         towerOfHanoiAlgorithm(n);
     }
 }
+
+
+/* Output: 
+ * Moving tower from 1 to 3
+ * Moving tower from 1 to 2
+ * Moving tower from 2 to 1
+ * Moving tower from 1 to 3
+ * Moving tower from 3 to 2
+ * Moving tower from 3 to 1
+ * Moving tower from 1 to 3
+ * Moving tower from 1 to 2
+ * Moving tower from 2 to 1
+ * Moving tower from 2 to 3
+ * Moving tower from 3 to 2
+ * Moving tower from 2 to 1
+ * Moving tower from 1 to 3
+ * Moving tower from 1 to 2
+ * Moving tower from 2 to 1
+ */
