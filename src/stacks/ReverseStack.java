@@ -1,9 +1,8 @@
-package stacks;
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class ReverseStack {
-
 
     /*
      * Reverse a stack
@@ -18,7 +17,6 @@ public class ReverseStack {
             insertAtBottom(c);
         }
     }
-
 
     private static void insertAtBottom(char c) {
         if(stack.isEmpty()) {
@@ -52,3 +50,10 @@ public class ReverseStack {
         System.out.println(stack);
     }
 }
+
+/* Output: 
+ * Original Stack
+ * [1, 2, 3, 4]
+ * Reversed Stack
+ * [4, 3, 2, 1]
+ */
