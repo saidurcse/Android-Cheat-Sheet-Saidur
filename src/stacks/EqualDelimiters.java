@@ -1,55 +1,55 @@
-package stacks;
-
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class EqualDelimiters {
 
+public static boolean checkIfDelimiterIsEqual(String s) {
+	        char[] charArr = s.toCharArray();
 
-    public static boolean checkIfDelimiterIsEqual(String s) {
-        char[] charArr = s.toCharArray();
+	        if(charArr.length <= 1) return true;
 
-        if(charArr.length <= 1) return true;
+	        Stack<Character> stack = new Stack<>();
 
-        Stack<Character> stack = new Stack<>();
+	        for(Character c : charArr) {
+	            if(c == '[' || c == '{' || c == '(') {
+	                stack.push(c);
+	            }
 
-        for(Character c : charArr) {
-            if(c == '[' || c == '{' || c == '(') {
-                stack.push(c);
+	            if(c == ')' || c == ']' || c == '}') {
 
-            }
+	                if (stack.isEmpty()) {
+	                    return false;
+	                }
 
-            if(c == ')' || c == ']' || c == '}') {
+	                Character character = stack.peek();
+	                if (c == ')' && character == '(') {
+	                    stack.pop();
+	                }
 
-                if (stack.isEmpty()) {
-                    return false;
-                }
+	                if (c == ']' && character == '[') {
+	                    stack.pop();
+	                }
 
-                Character character = stack.peek();
-                if (c == ')' && character == '(') {
-                    stack.pop();
-                }
+	                if (c == '}' && character == '{') {
+	                    stack.pop();
+	                }
+	            }
+	        }
 
-                if (c == ']' && character == '[') {
-                    stack.pop();
-                }
+	        if(s.length() > 0 && stack.isEmpty()){
+	            return true;
+	        }
 
-                if (c == '}' && character == '{') {
-                    stack.pop();
-                }
-            }
-        }
-
-        if(s.length() > 0 && stack.isEmpty()){
-            return true;
-        }
-
-        return false;
-    }
+	        return false;
+	    }
 
 
-    public static void main(String[] args) {
-        String string = "{[]}";
-        System.out.println(checkIfDelimiterIsEqual(string));
-    }
+	    public static void main(String[] args) {
+	        String string = "{[]}";
+	        System.out.println(checkIfDelimiterIsEqual(string));
+	    }
+
 }
+
+/* Output: true  */
