@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Set;
 
 public class Boggle {
+    /*
+    * http://www.shafaetsplanet.com/planetcoding/?p=1266
+    */
 
     /*
      * Given an NxN grid of characters and a dictionary, find all words which can be made from the characters
