@@ -55,6 +55,55 @@ public class Boggle {
                 }
                 numbers.add(new Pair(i, j));
             }
+/*
+    * http://www.shafaetsplanet.com/planetcoding/?p=1266
+    */
+
+    /*
+     * Given an NxN grid of characters and a dictionary, find all words which can be made from the characters
+     * in grid and present in the given dictionary. A word can start and end at any character in the grid.
+     * Next character must be adjacent to previous character in any of the directions i.e. up, down, left,
+     * right and diagonal. Character at each position in grid can be used only once while making a word.
+     * Sample:
+     *      char[][] grid = new char[][] {
+     *          {'c', 'a', 't'},
+     *          {'r', 'r', 'e'},
+     *          {'t', 'o', 'n'}
+     *      };
+     *
+     *
+     *  Runtime Complexity:
+     *  Exponential, O(Nn).
+     *  where 'N' is the dimension of the grid.
+     *
+     *  Memory Complexity:
+     *  Quadratic, O(N2).
+     *  where 'N' is the dimension of the grid. Recursive solution will consume memory on the stack as well.
+     *
+     *  As every character from the grid can appear only once in a word, so we need to maintain a boolean matrix to indicate if the
+     *  corresponding character in grid is used to make this word.
+     *
+     * */
+
+    char[][] grid;
+    boolean[][] state;
+    Set<String> dictionary;
+
+    private List<Pair> findAllNumbers(int x, int y) {
+        List<Pair> numbers = new ArrayList<>();
+
+        int start_x = Math.max(0, x - 1);
+        int start_y = Math.max(0, y - 1);
+        int end_x = Math.min(grid.length - 1, x + 1);
+        int end_y = Math.min(grid.length - 1, y + 1);
+
+        for (int i = start_x; i <= end_x; ++i) {
+            for (int j = start_y; j <= end_y; ++j) {
+                if (state[i][j]) {
+                    continue;
+                }
+                numbers.add(new Pair(i, j));
+            }
         }
         return numbers;
     }
@@ -153,3 +202,11 @@ public class Boggle {
         }
     }
 }
+
+/* Output: 
+ * art
+ * ton
+ * not
+ * cater
+ * cat
+ */
