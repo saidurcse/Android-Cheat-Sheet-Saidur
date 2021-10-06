@@ -1,11 +1,56 @@
-package backtracks;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class KSumSubsets {
 
+    /*
+     * Given an array of N positive integers, find all the subsets of the given array
+     * that sum up to the number K.
+     *
+     * Input: 1, 3, 5, 21, 19, 7, 2, 5
+     * Output: {3,7}, {5,5}, {3,5,2}, {1,7,2}, {3,2,5}
+     *
+     * Runtime Complexity:
+     * Exponential, O(2n) - where 'n' is number of integers in the given set.
+     *
+     * Memory Complexity:
+     * Constant, O(1)
+     *
+     * Rule: For a set of n elements there are 2n subsets.
+     * For example, a set with 3 elements will have 8 subsets.
+     *
+     * n = size of given integer set
+     * subsets_count = 2^n
+     * for i = 0 to subsets_count
+     *      form a subset using the value of 'i' as following:
+     *              bits in number 'i' represent index of elements to choose from original set,
+     *              if a specific bit is 1 choose that number from original set and add it to current subset,
+     * e.g. if i = 6 i.e 110 in binary means that 2nd and 3rd elements in original array need to be picked.
+     * if subset elements sum up to K (required sum), add current subset to list of all subsets
+       *
+     * */
+
+
+    private static int getBit(int num, int bit) {
+        int temp = (1 << bit);
+        temp = temp & num;
+        if (temp == 0) {
+            return 0;
+        }
+        return 1;
+    }
+
+    private static void getKSumSubsets(List<Integer> v,
+                                       Integer targetSum,
+                                       List<HashSet<Integer>> sets) {
+
+        int subsetsCount = (int) (Math.pow((double) 2, (double) v.size()));
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
+
+public class Solution {
 
     /*
      * Given an array of N positive integers, find all the subsets of the given array
@@ -97,3 +142,12 @@ public class KSumSubsets {
         verifyResult(subsets);
     }
 }
+
+/* Output: 
+ * 
+ * {3, 22, 87, 13, }
+ * {17, 87, 8, 13, }
+ * {17, 3, 39, 8, 13, 45, }
+ * {17, 3, 36, 22, 39, 8, }
+ *
+ */
