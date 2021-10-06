@@ -1,14 +1,12 @@
-package backtracks;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class NQueenProblem {
-
-    /*
+    
+	/*
      * Given a chess board of size N x N, determine how many ways N queens can be placed on this board
      * so that no two queens attack each other.
-     *
      *
      * A queen can move horizontally, vertically and diagonally on a chess board.
      * One queen can be attacked by another queen if it is present in the same row, column, or diagonal
@@ -22,7 +20,6 @@ public class NQueenProblem {
      * Step 4: When a queen is placed in the last row, that is a solution.
      * After finding a solution, backtrack to the previous row to find the next solution.
      * Try to find another column in the previous row where placement is permissible.
-     *
      *
      * Runtime Complexity:
      * Factorial, O(n!).
@@ -93,3 +90,103 @@ public class NQueenProblem {
     }
 
 }
+
+
+/* Output: 
+ * 
+ * Total Solutions Count: 92
+0 4 7 5 2 6 1 3 
+0 5 7 2 6 3 1 4 
+0 6 3 5 7 1 4 2 
+0 6 4 7 1 3 5 2 
+1 3 5 7 2 0 6 4 
+1 4 6 0 2 7 5 3 
+1 4 6 3 0 7 5 2 
+1 5 0 6 3 7 2 4 
+1 5 7 2 0 3 6 4 
+1 6 2 5 7 4 0 3 
+1 6 4 7 0 3 5 2 
+1 7 5 0 2 4 6 3 
+2 0 6 4 7 1 3 5 
+2 4 1 7 0 6 3 5 
+2 4 1 7 5 3 6 0 
+2 4 6 0 3 1 7 5 
+2 4 7 3 0 6 1 5 
+2 5 1 4 7 0 6 3 
+2 5 1 6 0 3 7 4 
+2 5 1 6 4 0 7 3 
+2 5 3 0 7 4 6 1 
+2 5 3 1 7 4 6 0 
+2 5 7 0 3 6 4 1 
+2 5 7 0 4 6 1 3 
+2 5 7 1 3 0 6 4 
+2 6 1 7 4 0 3 5 
+2 6 1 7 5 3 0 4 
+2 7 3 6 0 5 1 4 
+3 0 4 7 1 6 2 5 
+3 0 4 7 5 2 6 1 
+3 1 4 7 5 0 2 6 
+3 1 6 2 5 7 0 4 
+3 1 6 2 5 7 4 0 
+3 1 6 4 0 7 5 2 
+3 1 7 4 6 0 2 5 
+3 1 7 5 0 2 4 6 
+3 5 0 4 1 7 2 6 
+3 5 7 1 6 0 2 4 
+3 5 7 2 0 6 4 1 
+3 6 0 7 4 1 5 2 
+3 6 2 7 1 4 0 5 
+3 6 4 1 5 0 2 7 
+3 6 4 2 0 5 7 1 
+3 7 0 2 5 1 6 4 
+3 7 0 4 6 1 5 2 
+3 7 4 2 0 6 1 5 
+4 0 3 5 7 1 6 2 
+4 0 7 3 1 6 2 5 
+4 0 7 5 2 6 1 3 
+4 1 3 5 7 2 0 6 
+4 1 3 6 2 7 5 0 
+4 1 5 0 6 3 7 2 
+4 1 7 0 3 6 2 5 
+4 2 0 5 7 1 3 6 
+4 2 0 6 1 7 5 3 
+4 2 7 3 6 0 5 1 
+4 6 0 2 7 5 3 1 
+4 6 0 3 1 7 5 2 
+4 6 1 3 7 0 2 5 
+4 6 1 5 2 0 3 7 
+4 6 1 5 2 0 7 3 
+4 6 3 0 2 7 5 1 
+4 7 3 0 2 5 1 6 
+4 7 3 0 6 1 5 2 
+5 0 4 1 7 2 6 3 
+5 1 6 0 2 4 7 3 
+5 1 6 0 3 7 4 2 
+5 2 0 6 4 7 1 3 
+5 2 0 7 3 1 6 4 
+5 2 0 7 4 1 3 6 
+5 2 4 6 0 3 1 7 
+5 2 4 7 0 3 1 6 
+5 2 6 1 3 7 0 4 
+5 2 6 1 7 4 0 3 
+5 2 6 3 0 7 1 4 
+5 3 0 4 7 1 6 2 
+5 3 1 7 4 6 0 2 
+5 3 6 0 2 4 1 7 
+5 3 6 0 7 1 4 2 
+5 7 1 3 0 6 4 2 
+6 0 2 7 5 3 1 4 
+6 1 3 0 7 4 2 5 
+6 1 5 2 0 3 7 4 
+6 2 0 5 7 4 1 3 
+6 2 7 1 4 0 5 3 
+6 3 1 4 7 0 2 5 
+6 3 1 7 5 0 2 4 
+6 4 2 0 5 7 1 3 
+7 1 3 0 6 4 2 5 
+7 1 4 2 0 6 3 5 
+7 2 0 5 1 4 6 3 
+7 3 0 2 5 1 6 4 
+ * Total Solutions Count = 92
+ *
+ */
