@@ -1,6 +1,6 @@
-package graphs;
-
+import java.io.*;
 import java.util.*;
+import javafx.util.Pair;
 
 public class CloneDirectedGraph {
 
@@ -9,7 +9,6 @@ public class CloneDirectedGraph {
     * http://www.shafaetsplanet.com/?p=184 (Variable Graph Store-1)
     * http://www.shafaetsplanet.com/planetcoding/?p=211 (Variable Graph Store-2)
     * http://www.shafaetsplanet.com/planetcoding/?p=604 (BFS Algorithm)
-    * http://www.shafaetsplanet.com/?p=973 (DFS Algorithm)
     */
     
     /*
@@ -37,7 +36,7 @@ public class CloneDirectedGraph {
     // if there is an edge from x to y
     // that means there must be an edge from y to x
     // and there is no edge from a node to itself
-    // hence there can maximim of (nodes * nodes - nodes) / 2 edges in this graph
+    // hence there can maximum of (nodes * nodes - nodes) / 2 edges in this graph
     static ArrayList<Node> createTestGraphUndirected(int nodes_count, int edges_count) {
         ArrayList<Node> vertices = new ArrayList<Node>();
         for (int i = 0; i < nodes_count; ++i) {
@@ -212,3 +211,27 @@ public class CloneDirectedGraph {
         System.out.println(areGraphsEqualRec(vertices.get(0), cp, set));
     }
 }
+ 
+
+/* Output: 
+ * 
+{3, 22, 87, 13, }0: {3 4 6 2 1 }
+3: {0 4 6 5 1 2 }
+4: {0 3 1 5 2 }
+1: {4 2 3 6 5 0 }
+2: {0 1 6 3 4 }
+6: {0 3 1 2 5 }
+5: {3 6 1 4 }
+
+After copy: 
+0: {3 4 6 2 1 }
+3: {0 4 6 5 1 2 }
+4: {0 3 1 5 2 }
+1: {4 2 3 6 5 0 }
+2: {0 1 6 3 4 }
+6: {0 3 1 2 5 }
+5: {3 6 1 4 }
+true
+
+ *
+ */
