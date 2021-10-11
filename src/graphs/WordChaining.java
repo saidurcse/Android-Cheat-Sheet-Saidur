@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 import javafx.util.Pair;
 
-
 public class WordChaining {
 
 	/*
