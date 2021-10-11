@@ -1,15 +1,15 @@
-package graphs;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class MinimumSpanningTree {
 
     /*
+	 * http://www.shafaetsplanet.com/?p=692
+	 */
+
+	/*
      * Find the minimum spanning tree of a connected, undirected graph with weighted edges.
-     *
-     *
      *
      * Runtime Complexity:
      * Quadratic, O(n2)
@@ -32,6 +32,7 @@ public class MinimumSpanningTree {
      * This algorithm builds the tree one vertex at a time, starting from any arbitrary vertex.
      * It adds the minimum weight edge from the tree being constructed to a vertex from the remaining
      * vertices at each step.
+     * 
      * */
 
     protected static class Vertex {
@@ -221,8 +222,6 @@ public class MinimumSpanningTree {
         }
     };
 
-
-
     public static void testGraph1() {
         Graph g = new Graph(new ArrayList<>(), new ArrayList<>());
         int v = 5;
@@ -286,3 +285,26 @@ public class MinimumSpanningTree {
         testGraph2();
     }
 }
+ 
+/* Output: 
+ * 
+Testing graph 1...
+MST
+1->2
+1->3
+2->4
+4->5
+weight: 7
+
+Testing graph 2...
+MST
+1->3
+1->2
+3->4
+3->5
+4->7
+5->6
+weight: 9
+
+ *
+ */
