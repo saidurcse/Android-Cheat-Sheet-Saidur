@@ -1,13 +1,11 @@
-package graphs;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class WordChaining {
 
-
-    /*
+	/*
      * Figure out whether the given words can form a circular chain.
      * Assume that single word can never form a chain.
      *
@@ -17,7 +15,6 @@ public class WordChaining {
      * Output:
      *
      * */
-
 
     protected static class Vertex {
         private char value;
@@ -72,7 +69,6 @@ public class WordChaining {
         void setG(List<Vertex> g) {
             this.g = g;
         }
-
 
         // This method creates a graph from a list of words. A node of
         // the graph contains a character representing the start or end
@@ -190,7 +186,6 @@ public class WordChaining {
         }
     }
 
-
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>(Arrays.asList("eve", "eat", "ripe", "tear"));
         Graph g = new Graph(new ArrayList<>());
@@ -202,3 +197,10 @@ public class WordChaining {
         System.out.println("Result: " + output);
     }
 }
+ 
+/* Output: 
+ * 
+ * [eve, eat, ripe, tear]
+ * Result: All strings should form chain
+ *
+ */
