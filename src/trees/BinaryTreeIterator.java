@@ -1,10 +1,9 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
-import java.util.Stack;
-
-public class BinaryTreeIterator {
-
-
+public class BinaryTreeIterator  {
+	
     /*
      * Implement a class that implements an InOrder Iterator on a Binary Tree
      *
@@ -32,7 +31,6 @@ public class BinaryTreeIterator {
         }
     }
 
-
     private Node root1;
 
     private class InOrderTreeIterator {
@@ -44,7 +42,6 @@ public class BinaryTreeIterator {
                 root = root.left;
             }
         }
-
 
         public boolean hasNext() {
             return !stk.isEmpty();
@@ -72,10 +69,9 @@ public class BinaryTreeIterator {
         System.out.println();
     }
 
-
     public static void main(String[] args) {
 
-        BinaryTreeIterator tree = new BinaryTreeIterator();
+    	BinaryTreeIterator  tree = new BinaryTreeIterator();
         tree.root1 = new Node(100);
         tree.root1.left = new Node(50);
         tree.root1.right = new Node(200);
@@ -88,3 +84,9 @@ public class BinaryTreeIterator {
         System.out.println();
     }
 }
+ 
+/* Output: 
+ * 
+ * 25, 50, 75, 100, 125, 200, 350,
+ *
+ */
