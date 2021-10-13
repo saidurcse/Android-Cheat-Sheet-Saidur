@@ -1,12 +1,8 @@
-package trees;
-
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class ConnectAllSiblings {
-
 
     /*
      * Given the root to a binary tree where each node has an additional pointer called sibling (or next),
@@ -50,6 +46,47 @@ public class ConnectAllSiblings {
             if (current.left != null) {
                 last.next = current.left;
                 last = current.left;
+/*
+     * Given the root to a binary tree where each node has an additional pointer called sibling (or next),
+     * connect the sibling pointer to next node in the same level. Last node in each level should point
+     * to the first node of next level in the tree.
+     *
+     * Runtime Complexity:
+     * Linear, O(n)
+     *
+     * Memory Complexity:
+     * Constant O(1)
+     *
+     * Step 1: Initially set both current and last as 'root'
+     * Step 2: while current node is not null
+     *      If current node has a left child, append this left node to the last and make it last node.
+     *      If current node has a right child, append this right node to the last and make it last node.
+     *      update current node to current's next node
+     * */
+
+    protected static class Node {
+        int data;
+        Node left, right, next;
+
+        Node(int item) {
+            data = item;
+            left = right = next = null;
+        }
+    }
+
+    private Node root;
+
+    public static void populateSiblingPointers(Node root) {
+        if (root == null)
+            return;
+
+        Node current = root;
+        Node last = root;
+
+        while (current != null) {
+            if (current.left != null) {
+                last.next = current.left;
+                last = current.left;
             }
 
             if (current.right != null) {
@@ -61,7 +98,6 @@ public class ConnectAllSiblings {
             current = current.next;
         }
     }
-
 
     protected void levelOrderTraversal(Node root) {
 
@@ -101,11 +137,9 @@ public class ConnectAllSiblings {
         System.out.println();
     }
 
-
-
     public static void main(String[] args) {
 
-        ConnectAllSiblings tree = new ConnectAllSiblings();
+    	ConnectAllSiblings tree = new ConnectAllSiblings();
         tree.root = new Node(100);
         tree.root.left = new Node(50);
         tree.root.right = new Node(200);
@@ -126,3 +160,15 @@ public class ConnectAllSiblings {
     }
 
 }
+ 
+
+/* Output: 
+ * 
+ * 100,
+ * 50,200,
+ * 25,75,300,
+ * 350,
+ * Root -> next: 50
+ * Root->right->right->next: 350
+ *
+ */
