@@ -1,10 +1,8 @@
-package trees;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class BinaryTreeToLinkedList {
-
 
     /*
      * Convert a binary tree to a doubly linked list such that the order of the doubly linked list is the same as an in-order traversal of the binary tree.
@@ -51,7 +49,6 @@ public class BinaryTreeToLinkedList {
         }
     }
 
-
     private Node root1;
 
     protected static Node concatenateLists(Node head1,
@@ -78,7 +75,6 @@ public class BinaryTreeToLinkedList {
         return head1;
     }
 
-
     protected static Node convertToLinkedList(Node root) {
 
         if (root == null) {
@@ -95,7 +91,6 @@ public class BinaryTreeToLinkedList {
         return result;
     }
     
-
     static List<Integer> getList(Node head) {
         List<Integer> r = new ArrayList<Integer>();
         if (head == null) {
@@ -111,10 +106,9 @@ public class BinaryTreeToLinkedList {
         return r;
     }
     
-
     public static void main(String[] args) {
 
-        BinaryTreeToLinkedList binaryTreeToLinkedList = new BinaryTreeToLinkedList();
+    	BinaryTreeToLinkedList binaryTreeToLinkedList = new BinaryTreeToLinkedList();
         binaryTreeToLinkedList.root1 = new Node(100);
         binaryTreeToLinkedList.root1.left = new Node(50);
         binaryTreeToLinkedList.root1.right = new Node(200);
@@ -128,3 +122,9 @@ public class BinaryTreeToLinkedList {
         System.out.println(result);
     }
 }
+ 
+/* Output: 
+ * 
+ * [25, 50, 75, 100, 125, 200, 350]
+ *
+ */
