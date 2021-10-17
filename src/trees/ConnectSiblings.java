@@ -1,8 +1,8 @@
-package trees;
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class ConnectSiblings {
-
 
     /*
      * Given a binary tree, connect its siblings at each level
@@ -104,3 +104,13 @@ public class ConnectSiblings {
         System.out.println("next of " + tree.root.left.left.data + " is " + d);
     }
 }
+
+/* Output: 
+ * 
+ * Following are populated next pointers in the tree(-1 is printed if there is no next)
+ * next of 10 is -1
+ * next of 8 is 2
+ * next of 2 is -1
+ * next of 3 is -1
+ *
+ */
