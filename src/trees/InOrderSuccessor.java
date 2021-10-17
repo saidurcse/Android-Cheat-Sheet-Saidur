@@ -1,7 +1,6 @@
-package trees;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class InOrderSuccessor {
 
@@ -53,8 +52,7 @@ public class InOrderSuccessor {
             return right;
         }
     }
-
-
+    
     private Node root1;
 
     private static Node findMin(Node root) {
@@ -93,7 +91,6 @@ public class InOrderSuccessor {
         return successor;
     }
 
-
     protected List<Integer> values = new ArrayList<>();
     protected List<Integer> storeKeyValues(Node root) {
         treeTravel(root);
@@ -107,7 +104,6 @@ public class InOrderSuccessor {
             treeTravel(node.right);
         }
     }
-
 
     public static void main(String[] args) {
         ArrayList<Integer> orig_data = new ArrayList<>();
@@ -127,7 +123,6 @@ public class InOrderSuccessor {
         inOrderSuccessor.root1.left.right = new Node(75);
         inOrderSuccessor.root1.right.left = new Node(125);
         inOrderSuccessor.root1.right.right = new Node(350);
-
 
         List<Integer> bstToList = inOrderSuccessor.storeKeyValues(inOrderSuccessor.root1);
 
@@ -156,3 +151,5 @@ public class InOrderSuccessor {
         }
     }
 }
+
+/* Output: (25, 50) (125, 200) (200, 350) (350, null) (50, 75) (75, 100) (100, 125) */
