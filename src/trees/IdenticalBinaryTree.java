@@ -1,7 +1,8 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class IdenticalBinaryTree {
-
 
     /*
      * Given roots of two binary trees, determine if these trees are identical or not.
@@ -22,7 +23,7 @@ public class IdenticalBinaryTree {
      *      right sub-tree of 'A' is identical to the right sub-tree of 'B'
      * To solve this problem do a depth first traversal on both trees simultaneously and keep comparing the data
      * at each level.
-      *
+     *
      * */
 
     private Node root1, root2;
@@ -65,7 +66,6 @@ public class IdenticalBinaryTree {
         return false;
     }
 
-
     public static void main(String[] args) {
         IdenticalBinaryTree tree = new IdenticalBinaryTree();
 
@@ -85,6 +85,7 @@ public class IdenticalBinaryTree {
             System.out.println("Both trees are identical");
         else
             System.out.println("Trees are not identical");
-
     }
 }
+
+/* Output: Both trees are identical */
