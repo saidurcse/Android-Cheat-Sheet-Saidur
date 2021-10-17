@@ -1,12 +1,8 @@
-package trees;
-
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class DeleteZeroSumSubTrees {
-
 
     /*
      * Given root of a binary tree, delete any subtrees whose nodes sum up to zero
@@ -48,9 +44,7 @@ public class DeleteZeroSumSubTrees {
         }
     }
 
-
     private Node root1;
-
 
     public static int deleteZeroSumSubtreeRec(Node root) {
 
@@ -70,8 +64,6 @@ public class DeleteZeroSumSubTrees {
         return root.data + sumLeft + sumRight;
     }
 
-
-
     protected void deleteZeroSumSubtree() {
         if (root1 == null) {
             return;
@@ -81,8 +73,6 @@ public class DeleteZeroSumSubTrees {
             root1 = null;
         }
     }
-
-
 
     public static Node createTestTree() {
         Node head = new Node(7);
@@ -101,7 +91,6 @@ public class DeleteZeroSumSubTrees {
 
         return head;
     }
-
 
     protected void levelOrderTraversal(Node root) {
 
@@ -141,7 +130,6 @@ public class DeleteZeroSumSubTrees {
         System.out.println();
     }
 
-
     public static void main(String[] args) {
 
         DeleteZeroSumSubTrees tree = new DeleteZeroSumSubTrees();
@@ -153,5 +141,15 @@ public class DeleteZeroSumSubTrees {
         tree.deleteZeroSumSubtree();
         tree.levelOrderTraversal(tree.root1);
     }
-
 }
+
+/* Output: 
+ * 
+ * 7,
+ * 5,6,
+ * -3,-2,
+ * 
+ * 7,
+ * 6,
+ *
+ */
