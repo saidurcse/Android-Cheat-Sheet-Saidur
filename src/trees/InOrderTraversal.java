@@ -1,9 +1,8 @@
-package trees;
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class InOrderTraversal {
-
 
         /*
          * Given a binary tree, write an iterative algorithm to traverse the tree inorder.
@@ -51,9 +50,7 @@ public class InOrderTraversal {
         }
     }
 
-
     private Node root1;
-
 
     protected void inOrderIterative(Node root) {
         if (root == null)
@@ -73,7 +70,6 @@ public class InOrderTraversal {
         }
     }
 
-
     public static void main(String[] args) {
         InOrderTraversal inOrderTraversal = new InOrderTraversal();
 
@@ -89,3 +85,6 @@ public class InOrderTraversal {
         System.out.println();
     }
 }
+
+
+/* Output: 25 50 75 100 125 200 350 */
