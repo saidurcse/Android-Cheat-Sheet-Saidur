@@ -1,4 +1,6 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class IsBST {
 
@@ -39,7 +41,6 @@ public class IsBST {
         }
     }
 
-
     private Node root1;
 
     private static boolean isBstRec(Node root,
@@ -63,8 +64,6 @@ public class IsBST {
     public static boolean isBst(Node root) {
         return isBstRec(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
-    
-    
 
     public static void main(String[] argv) {
 
@@ -81,3 +80,5 @@ public class IsBST {
         System.out.println("Is it BST: " + Boolean.toString(isBst(isBST.root1)));
     }
 }
+
+/* Output: Is it BST: true */
