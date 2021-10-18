@@ -1,4 +1,6 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -7,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.util.Stack;
 
 public class SerializeBinaryTree {
-
-
 
     /*
      * Serialize binary tree to a file and then deserialize back to tree
@@ -63,8 +63,6 @@ public class SerializeBinaryTree {
         serialize(node.right, stream);
     }
 
-
-
     protected Node deserialize(ObjectInputStream stream) throws java.io.IOException {
         int val = stream.readInt();
         if (val == MARKER) {
@@ -76,7 +74,6 @@ public class SerializeBinaryTree {
         node.right = deserialize(stream);
         return node;
     }
-
 
     protected void inOrderDisplay(Node root) {
         if (root == null)
@@ -96,7 +93,6 @@ public class SerializeBinaryTree {
         }
     }
 
-
     protected boolean isIdentical(Node root1,
                                   Node root2) {
 
@@ -112,7 +108,6 @@ public class SerializeBinaryTree {
 
         return false;
     }
-
 
     public static void main(String[] args) {
         try{
@@ -147,3 +142,9 @@ public class SerializeBinaryTree {
         }
     }
 }
+
+
+/* Output: 
+Result
+4 2 5 1 6 3 7 true
+*/
