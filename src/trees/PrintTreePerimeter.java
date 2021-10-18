@@ -1,9 +1,8 @@
-package trees;
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class PrintTreePerimeter {
-
 
     /*
      * Given the root node of a binary tree, print nodes forming the boundary (perimeter).
@@ -23,7 +22,6 @@ public class PrintTreePerimeter {
      * while printing them.
      *
      * */
-
 
     private static class Node {
         private int data;
@@ -47,7 +45,6 @@ public class PrintTreePerimeter {
         }
     }
 
-
     private Node root1;
 
     protected static void printLeftPerimeter(Node root) {
@@ -69,7 +66,6 @@ public class PrintTreePerimeter {
         }
     }
     
-
     public static void printRightPerimeter(Node root) {
 
         Stack<Integer> rightValues = new Stack<>();
@@ -96,8 +92,6 @@ public class PrintTreePerimeter {
         }
     }
     
-    
-
     protected static void printLeafNodes(Node root) {
         if (root != null) {
             printLeafNodes(root.left);
@@ -125,7 +119,6 @@ public class PrintTreePerimeter {
         }
     }
     
-
     public static void main(String[] argv) {
         PrintTreePerimeter printTreePerimeter = new PrintTreePerimeter();
         printTreePerimeter.root1 = new Node(1);
@@ -140,3 +133,8 @@ public class PrintTreePerimeter {
         displayTreePerimeter(printTreePerimeter.root1);
     }
 }
+
+/* Output: 
+Perimeter:
+1 2 4 5 6 7 3 
+*/
