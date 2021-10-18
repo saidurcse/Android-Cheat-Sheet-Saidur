@@ -1,7 +1,8 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class NthHighestBST {
-
 
     /*
      * Find nth highest node in a Binary Search Tree(BST)
@@ -41,7 +42,6 @@ public class NthHighestBST {
         }
     }
 
-
     private Node root1;
     protected int currentCount = 0;
 
@@ -70,7 +70,6 @@ public class NthHighestBST {
         return null;
     }
 
-
     public static void main(String[] argv) {
 
         NthHighestBST nthHighestBST = new NthHighestBST();
@@ -81,7 +80,6 @@ public class NthHighestBST {
         nthHighestBST.root1.left.right = new Node(75);
         nthHighestBST.root1.right.left = new Node(125);
         nthHighestBST.root1.right.right = new Node(350);
-
 
         int n = 2;
         nthHighestBST.currentCount = 0;
@@ -104,3 +102,11 @@ public class NthHighestBST {
         System.out.println(String.format(" - %d highest node is %d", n, nth_highest_node));
     }
 }
+
+
+/* Output: 
+ - 2 highest node is 200
+ - 1 highest node is 350
+ - 5 highest node is 75
+ - 30 highest node is null
+*/
