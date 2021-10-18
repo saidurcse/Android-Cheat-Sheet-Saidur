@@ -1,4 +1,6 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -66,7 +68,6 @@ public class MirrorBinaryTreeNodes {
         root.right = temp;
     }
 
-
     protected static void levelOrderTraversal(Node root) {
 
         if (root == null) {
@@ -105,7 +106,6 @@ public class MirrorBinaryTreeNodes {
         System.out.println();
     }
     
-
     public static void main(String[] argv) {
         MirrorBinaryTreeNodes tree = new MirrorBinaryTreeNodes();
         tree.root1 = new Node(1);
@@ -121,3 +121,13 @@ public class MirrorBinaryTreeNodes {
         tree.levelOrderTraversal(tree.root1);
     }
 }
+
+/* Output: 
+1,
+2,3,
+4,5,6,7,
+
+1,
+3,2,
+7,6,5,4,
+*/
