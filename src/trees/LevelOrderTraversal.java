@@ -1,4 +1,6 @@
-package trees;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -6,7 +8,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class LevelOrderTraversal {
-
 
     /*
      * Given root of a binary tree, display node values at each level. Node values for all levels should be displayed on separate lines.
@@ -48,7 +49,6 @@ public class LevelOrderTraversal {
         }
     }
 
-
     private Node root1;
 
     protected static void levelOrderTraversal(Node root) {
@@ -74,6 +74,8 @@ public class LevelOrderTraversal {
             if (temp.left != null) {
                 nextQueue.add(temp.left);
             }
+            
+            
 
             if (temp.right != null) {
                 nextQueue.add(temp.right);
@@ -88,8 +90,6 @@ public class LevelOrderTraversal {
         }
         System.out.println();
     }
-
-
 
     public static void main(String[] argv) {
         
@@ -106,3 +106,9 @@ public class LevelOrderTraversal {
         System.out.println();
     }
 }
+
+/* Output: 
+100,
+50,200,
+25,75,125,350,
+*/
