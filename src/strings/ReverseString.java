@@ -1,7 +1,8 @@
-package strings;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class ReverseString {
-
 
     /*
      * Reverse characters in a sentence
@@ -19,7 +20,6 @@ public class ReverseString {
         return reverse;
     }
 
-
     /*
      * Reverse words in a sentence
      * Eg: "Hello World" -> "World Hello"
@@ -29,8 +29,7 @@ public class ReverseString {
      * it does not require any extra space.
      *
      * */
-
-
+    
     /*
      * This solution of using a String called 'reverse' would affect performance if the string is really long.
      * Since string is immutable, every word added to the reverse String creates a new object. So if we have a really
@@ -41,6 +40,7 @@ public class ReverseString {
      * thread-safe.
      * http://www.techtamasha.com/difference-between-string-and-stringbufferstringbuilder-in-java/28
      * */
+    
     public static String reverseWord(String s) {
         String reverse = "";
 
@@ -52,10 +52,15 @@ public class ReverseString {
         return reverse;
     }
 
-
     public static void main(String[] args) {
         String string = "The quick brown fox jumped over the lazy dog.";
         System.out.println(reverseString(string));
         System.out.println(reverseWord(string));
     }
 }
+
+
+/* Output: 
+.god yzal eht revo depmuj xof nworb kciuq ehT
+dog. lazy the over jumped fox brown quick The
+*/
