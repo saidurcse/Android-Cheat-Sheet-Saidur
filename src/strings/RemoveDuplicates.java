@@ -1,10 +1,11 @@
-package strings;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class RemoveDuplicates {
-
 
     /*
      * Given a string that contains duplicate occurrences of characters, remove these duplicate occurrences
@@ -33,17 +34,17 @@ public class RemoveDuplicates {
         return sb.toString();
     }
 
+    // this solution uses extra memory
+    // to keep all characters present in string.
 
-        // this solution uses extra memory
-        // to keep all characters present in string.
-
-        // Null terminating strings are not used in Java.
-        // For this question, assume that you are passed a
-        // null terminated string (array of characters).
+    // Null terminating strings are not used in Java.
+    // For this question, assume that you are passed a
+    // null terminated string (array of characters).
     /*
      * Runtime Complexity - Linear O(n).
      * Memory Complexity - Linear, O(n).
      * */
+    
     public static void removeDuplicates1(char[] str){
         Set<Character> hashSet = new LinkedHashSet<>();
 
@@ -65,14 +66,13 @@ public class RemoveDuplicates {
         str[write_index] = '\0';
     }
 
-
-
     // this solution does not require any extra memory
     // but runs in O(n^2) time
 
     // Null terminating strings are not used in Java.
     // For this question, assume that you are passed a
     // null terminated string (array of characters).
+    
     public static void removeDuplicates2(char[] str){
         if(str == null || str.length == 0) {
             return;
@@ -98,9 +98,10 @@ public class RemoveDuplicates {
         str[write_index] = '\0';
     }
 
-
     public static void main(String[] args) {
         String string = "abbabcddbabcdeedebc";
         System.out.println(removeDuplicates(string));
     }
 }
+
+/* Output: abcde */
