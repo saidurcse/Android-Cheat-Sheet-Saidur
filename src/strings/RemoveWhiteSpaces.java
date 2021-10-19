@@ -1,9 +1,8 @@
-package strings;
-
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class RemoveWhiteSpaces {
-
 
     /*
      * Given a null terminated string, remove any white spaces (tabs or spaces).
@@ -14,6 +13,7 @@ public class RemoveWhiteSpaces {
      * Memory Complexity - Constant, O(1).
      *
      * */
+    
     public static String removeWhiteSpaces(String s) {
         char[] arr = s.toCharArray();
         int readIndex = 0;
@@ -29,9 +29,12 @@ public class RemoveWhiteSpaces {
         return result;
     }
 
-
     public static void main(String[] args) {
         String string = "    All greek  to    me.    \n";
         System.out.println(removeWhiteSpaces(string));
     }
+    
 }
+
+
+/* Output: Allgreektome. */
