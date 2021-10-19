@@ -1,7 +1,6 @@
-package strings;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class PalindroneStrings {
 
@@ -10,7 +9,6 @@ public class PalindroneStrings {
      * Input - "aabbbaa"
      * Output - aa, bb, bbb, abbba, aabbbaa, bb,aa
      * */
-
 
     /*
      * A naive solution of this problem is to find all substrings of a given string and check whether each substring
@@ -28,12 +26,14 @@ public class PalindroneStrings {
      * Memory Complexity - Constant, O(1).
      *
      * */
+    
     public static List<String> findAllPalindromesInString(String input) {
         List<String> words = new ArrayList<>();
         for(int i=0; i<input.length(); ++i) {
             words.addAll(findPalindromeInSubString(input, i-1, i+1));
             words.addAll(findPalindromeInSubString(input, i, i+1));
         }
+        
         return words;
     }
 
@@ -49,9 +49,10 @@ public class PalindroneStrings {
         return words;
     }
 
-
     public static void main(String[] args) {
         String input = "aabbbaa";
         System.out.println(findAllPalindromesInString(input));
     }
 }
+
+/* Output: [aa, bb, bbb, abbba, aabbbaa, bb, aa] */
