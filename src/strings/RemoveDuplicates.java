@@ -19,6 +19,7 @@ public class RemoveDuplicates {
      * The reason why LinkedHashSet maintains insertion order is because the underlying data structure is a doubly-linked list.
      *
      * */
+    
     public static String removeDuplicates(String s) {
         Set<Character> characterSet = new LinkedHashSet<>();
         char[] charArr = s.toCharArray();
