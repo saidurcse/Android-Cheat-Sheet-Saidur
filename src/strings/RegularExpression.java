@@ -1,8 +1,8 @@
-package strings;
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class RegularExpression {
-
 
     /*
      * Given a text and a pattern, determine if the pattern matches with text completely or not using regular
@@ -69,16 +69,17 @@ public class RegularExpression {
         return false;
     }
 
-
     static boolean regexMatch(String text, String pattern) {
         return isRegexMatch(text, pattern);
     }
 
-
     public static void main(String[] args) {
         String input = "aabbbbbcdda";
         String pattern = "a*bb*cdda"; // -> true
-//        String pattern = "a*b*c*da";  // -> false
+      //String pattern = "a*b*c*da";  // -> false
         System.out.println(regexMatch(input, pattern));
     }
 }
+
+
+/* Output: true */
