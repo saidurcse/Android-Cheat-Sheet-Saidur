@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class FindFactorial {
 
@@ -11,9 +12,11 @@ public class FindFactorial {
         return fact;
     }
 
-
     public static void main(String[] args) {
         int n = 5;
         System.out.println(computeFactorial(n));
     }
 }
+
+
+/* Output: 120 */
