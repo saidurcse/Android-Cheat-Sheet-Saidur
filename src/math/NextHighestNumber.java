@@ -1,5 +1,5 @@
-package math;
-
+import java.io.*;
+import java.util.*;
 
 public class NextHighestNumber {
 
@@ -14,6 +14,7 @@ public class NextHighestNumber {
      * Step 4) Swap these values
      *
      * */
+    
     public static Integer findNextHighestNumber(int num) {
 
         char[] c = String.valueOf(num).toCharArray();
@@ -46,9 +47,11 @@ public class NextHighestNumber {
         return Integer.valueOf(new String(c));
     }
 
-
     public static void main(String[] args) {
         int n = 1234;
         System.out.println(findNextHighestNumber(n));
     }
 }
+
+
+/* Output: 1243 */
