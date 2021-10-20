@@ -1,6 +1,6 @@
-package strings;
-
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,6 +20,7 @@ public class StringSegmentation {
      *  This will reduce the runtime of the algorithm to O(n2)
      *
      * */
+    
     public static boolean canBeSegmented(Set<String> firstDict,
                                          Set<String> secondDict,
                                          String s) {
@@ -45,9 +46,6 @@ public class StringSegmentation {
         return false;
     }
 
-
-
-
     public static void main(String[] args) {
         Set<String> firstDict = new HashSet<>();
         firstDict.add("apple");
@@ -60,3 +58,6 @@ public class StringSegmentation {
         System.out.println(canBeSegmented(firstDict,secondDict, string));
     }
 }
+
+
+/* Output: true */
