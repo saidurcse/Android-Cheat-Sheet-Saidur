@@ -1,12 +1,14 @@
-package strings;
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class CheckIfAnagram {
-
 
     /*
      * Input: "Keep", "Peek"
      * Output: false
      * */
+    
     public static boolean checkIfAnagram(String word1, String word2) {
         char[] cArr1 = word1.toCharArray();
         char[] cArr2 = word2.toCharArray();
@@ -27,7 +29,6 @@ public class CheckIfAnagram {
 
         return true;
     }
-
 
     private static void quickSort(char[] arr, int lowerIndex, int upperIndex) {
         if(lowerIndex < upperIndex) {
@@ -62,3 +63,6 @@ public class CheckIfAnagram {
         System.out.println(checkIfAnagram(s1, s2));
     }
 }
+
+
+/* Output: false */
