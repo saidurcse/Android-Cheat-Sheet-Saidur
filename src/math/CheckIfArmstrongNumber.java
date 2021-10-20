@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class CheckIfArmstrongNumber {
 
@@ -15,9 +16,11 @@ public class CheckIfArmstrongNumber {
         return (c == temp);
     }
 
-
     public static void main(String[] args) {
         int n = 1234;
         System.out.println(checkIfArmstrongNumber(n));
     }
 }
+
+
+/* Output: false */
