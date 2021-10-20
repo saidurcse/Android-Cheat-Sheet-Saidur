@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,9 +21,11 @@ public class FindPrimeFactors {
         return primeFactors;
     }
 
-
     public static void main(String[] args) {
         int n = 15;
         System.out.println(findPrimeFactors(n));
     }
 }
+
+
+/* Output: [3, 5] */
