@@ -1,7 +1,7 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class PrintPrimeNumbers {
-
 
     public static void printPrimeNumbers(int num) {
         int count;
@@ -25,3 +25,11 @@ public class PrintPrimeNumbers {
         printPrimeNumbers(n);
     }
 }
+
+
+/* Output: 
+1
+2
+3
+5 
+*/
