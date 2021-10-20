@@ -1,5 +1,6 @@
-package strings;
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class NextHighestPermutation {
 
@@ -9,6 +10,7 @@ public class NextHighestPermutation {
      * Output: "abcb"
      * Follow same logic as finding the next Highest integer from a given integer
      * */
+    
     public static String permutateString(String s) {
         char[] c = s.toCharArray();
 
@@ -37,11 +39,12 @@ public class NextHighestPermutation {
 
         return new String(c);
     }
-
-
-
+    
     public static void main(String[] args) {
         String input = "abbc";
         System.out.println(permutateString(input));
     }
 }
+
+
+/* Output: abcb */
