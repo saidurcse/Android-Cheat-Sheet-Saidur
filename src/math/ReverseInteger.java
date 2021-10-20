@@ -1,5 +1,6 @@
-package math;
-
+import java.io.*;
+import java.util.*;
+import javafx.util.Pair;
 
 public class ReverseInteger {
 
@@ -19,9 +20,11 @@ public class ReverseInteger {
         return reverse;
     }
 
-
     public static void main(String[] args) {
         int n = 4321;
         System.out.println(reverseInteger(n));
     }
 }
+
+
+/* Output: 1234 */
