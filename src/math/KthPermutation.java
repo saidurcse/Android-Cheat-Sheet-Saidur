@@ -1,10 +1,10 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class KthPermutation {
-
 
     /*
      * Given a set of n elements find their kth permutation.
@@ -52,7 +52,6 @@ public class KthPermutation {
         findKthPermutation(v, k, result);
     }
 
-
     private static String getPermutation(int n, int k) {
         List<Character> v = new ArrayList<>();
         char c = '1';
@@ -66,8 +65,9 @@ public class KthPermutation {
         return result.toString();
     }
 
-
     public static void main(String[] args) {
         System.out.println(getPermutation(4, 2));
     }
 }
+
+/* Output: 1243 */
