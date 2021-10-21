@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class IntegerDivision {
 
@@ -51,7 +52,6 @@ public class IntegerDivision {
         return q;
     }
 
-
     public static void main(String[] args) {
         System.out.println("5/11 " + String.valueOf(integerDivide(55, 11) == 5));
         System.out.println("54/2 " + String.valueOf(integerDivide(54, 2) == 27));
@@ -59,3 +59,11 @@ public class IntegerDivision {
         System.out.println("51/0 " + String.valueOf(integerDivide(51, 0) == -1));
     }
 }
+
+
+/* Output: 
+5/11 true
+54/2 true
+51/13 true
+51/0 true
+ */
