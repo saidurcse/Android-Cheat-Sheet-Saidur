@@ -1,7 +1,7 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class CheckIfBinary {
-
 
     public static boolean isBinary(int n) {
         while (n> 0) {
@@ -16,3 +16,6 @@ public class CheckIfBinary {
         System.out.println(isBinary(n));
     }
 }
+
+
+/* Output: true */
