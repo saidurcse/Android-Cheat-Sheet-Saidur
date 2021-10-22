@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +7,6 @@ import java.util.List;
 import java.util.Random;
 
 public class FindPythagoreanTriplets {
-
 
     /*
      * Given an integer array find all Pythagorean triplets (a^2 + b^2 = c^2).
@@ -23,7 +23,6 @@ public class FindPythagoreanTriplets {
      *
      *
      * */
-
 
     protected static List<int[]> findPythagoreanTriplets(int[] arr) {
         int n = arr.length;
@@ -66,10 +65,9 @@ public class FindPythagoreanTriplets {
         return triplets;
     }
 
-
     public static void main(String[] argv) {
 
-        int[] l2 = {13, 4, 25, 6, 8, 110, 99, 32, 15, 18, 19};
+        int[] l2 = {4, 16, 1, 2, 3, 5, 6, 8, 25, 10};
         List<int[]> t2 = findPythagoreanTriplets(l2);
 
         System.out.println("***********");
@@ -81,3 +79,10 @@ public class FindPythagoreanTriplets {
         }
     }
 }
+
+
+/* Output: 
+***********
+5, 3, 4, 
+10, 6, 8, 
+*/
