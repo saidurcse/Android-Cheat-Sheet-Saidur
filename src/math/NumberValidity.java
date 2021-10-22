@@ -1,7 +1,7 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class NumberValidity {
-
 
     /*
      * Given an input string, determine if it makes a valid number or not
@@ -21,13 +21,10 @@ public class NumberValidity {
      *
      * */
 
-    enum STATE {START, INTEGER, DECIMAL, UNKNOWN}
-
-    ;
+    enum STATE {START, INTEGER, DECIMAL, UNKNOWN};
 
     private static STATE getNextState(STATE current_state,
                                       char ch) {
-
         switch (current_state) {
 
             case START:
@@ -74,7 +71,6 @@ public class NumberValidity {
         return true;
     }
 
-
     public static void main(String[] args) {
         String s = "4.325";
 
@@ -86,3 +82,8 @@ public class NumberValidity {
         }
     }
 }
+
+
+/* Output: 
+4.325 is valid.
+*/
