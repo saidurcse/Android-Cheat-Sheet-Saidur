@@ -1,7 +1,7 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 public class CalculateRoot {
-
 
     /*
      *
@@ -31,7 +31,6 @@ public class CalculateRoot {
 
     protected static double squareRootIterative(double num) {
         double low = 0;
-
 
         // square root can never be more than
         // half of number except if number is <= 1
@@ -64,7 +63,6 @@ public class CalculateRoot {
 
         return -1;
     }
-
 
     public static void main(String[] args) {
         int x = 100;
