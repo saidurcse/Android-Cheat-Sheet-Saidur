@@ -1,9 +1,9 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.math.BigDecimal;
 
 public class PowerOfNumber {
-
 
     /*
      * Given a double 'x' and an integer 'n'. Write a function to calculate 'x' raised to the power 'n'.
@@ -50,7 +50,6 @@ public class PowerOfNumber {
         return result;
     }
 
-
     protected static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
@@ -59,11 +58,9 @@ public class PowerOfNumber {
         return bd.doubleValue();
     }
 
-
     protected static double round(double value) {
         return round(value, 6);
     }
-
 
     public static void main(String[] args) {
         int n = 6;
@@ -82,3 +79,5 @@ public class PowerOfNumber {
         System.out.println(diff > 0.0000000001);
     }
 }
+
+/* Output: false */
