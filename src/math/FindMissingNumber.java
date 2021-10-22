@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,3 +54,9 @@ public class FindMissingNumber {
         System.out.println("Missing Element == Actual Missing : " + (missingElement == actual_missing));
     }
 }
+
+
+/* Output: 
+Expected Missing = 5 Actual Missing = 5
+Missing Element == Actual Missing : true 
+*/
