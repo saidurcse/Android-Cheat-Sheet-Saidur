@@ -1,4 +1,5 @@
-package misc;
+import java.io.*;
+import java.util.*;
 
 public class SearchMatrix {
 
@@ -37,7 +38,6 @@ public class SearchMatrix {
 
     }
 
-
     protected static Pair searchInMatrix(int matrix[][],
                                          int value) {
 
@@ -65,7 +65,6 @@ public class SearchMatrix {
         return new Pair(-1, -1);
     }
 
-
     protected static void verifySearch(int[][] matrix) {
 
         for (int i = 0; i < matrix.length; ++i) {
@@ -79,7 +78,6 @@ public class SearchMatrix {
         }
     }
 
-
     public static void main(String[] args) {
         int[][] matrix = new int[][]{
                 {1, 5, 45, 80, 81},
@@ -91,3 +89,26 @@ public class SearchMatrix {
         verifySearch(matrix);
     }
 }
+
+/* Output: 
+Verifying at 0, 0
+Verifying at 0, 1
+Verifying at 0, 2
+Verifying at 0, 3
+Verifying at 0, 4
+Verifying at 1, 0
+Verifying at 1, 1
+Verifying at 1, 2
+Verifying at 1, 3
+Verifying at 1, 4
+Verifying at 2, 0
+Verifying at 2, 1
+Verifying at 2, 2
+Verifying at 2, 3
+Verifying at 2, 4
+Verifying at 3, 0
+Verifying at 3, 1
+Verifying at 3, 2
+Verifying at 3, 3
+Verifying at 3, 4
+ */
