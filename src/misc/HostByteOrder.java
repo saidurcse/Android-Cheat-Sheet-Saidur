@@ -1,10 +1,8 @@
-package misc;
-
-
+import java.io.*;
+import java.util.*;
 import java.nio.ByteOrder;
 
 public class HostByteOrder {
-
 
     /*
      * Write a program to determine the host byte order of any system.
@@ -28,9 +26,10 @@ public class HostByteOrder {
         return ByteOrder.nativeOrder();
     }
 
-
     public static void main(String[] args) {
         System.out.println(findHostByteOrder());
         assert (findHostByteOrder().equals(ByteOrder.LITTLE_ENDIAN));
     }
 }
+
+/* Output: LITTLE_ENDIAN */
