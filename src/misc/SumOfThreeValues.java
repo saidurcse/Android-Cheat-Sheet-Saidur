@@ -1,9 +1,9 @@
-package misc;
+import java.io.*;
+import java.util.*;
 
 import java.util.Arrays;
 
 public class SumOfThreeValues {
-
 
     /*
      * Given an array of integers and a value, determine if there are any three integers in the array
@@ -26,10 +26,9 @@ public class SumOfThreeValues {
      *
      * */
 
-
     public static Boolean findSumOfThreeValues(int arr[],
                                                int requiredSum) {
-
+        
         Arrays.sort(arr);
 
         for (int i = 0; i < arr.length - 2; i++) {
@@ -47,7 +46,6 @@ public class SumOfThreeValues {
         return false;
     }
 
-
     public static void main(String[] args) {
         int[] arr = {-25, -10, -7, -3, 2, 4, 8, 10};
         System.out.println("-8: " + findSumOfThreeValues(arr, -8));
@@ -64,3 +62,18 @@ public class SumOfThreeValues {
         System.out.println("1: " + findSumOfThreeValues(arr, 1));
     }
 }
+
+/* Output: 
+-8: true
+-25: true
+0: true
+-42: true
+22: true
+-7: true
+-3: true
+2: true
+4: true
+8: true
+7: true
+1: false
+ */
