@@ -70,3 +70,6 @@ public class CalculateRoot {
         System.out.println("Square Root: " + res1);
     }
 }
+
+
+/* Output: Square Root: 10.000000163912773 */
