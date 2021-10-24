@@ -1,4 +1,5 @@
-package misc;
+import java.io.*;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +71,6 @@ public class ClosestMeetingPoint {
         }
     }
 
-
     protected static class Distance {
         public Point shortestDistanceTravelled(int m, List<Point> points) {
             Point min_pt = new Point(0, 0);
@@ -112,7 +112,6 @@ public class ClosestMeetingPoint {
         }
     }
 
-
     public static void main(String[] args) {
 
         int m = 5; // size of the grid
@@ -126,3 +125,6 @@ public class ClosestMeetingPoint {
         System.out.println("Shortest Distance Point = p(" + pt.getX() + ", " + pt.getY() + ")");
     }
 }
+
+
+/* Output: Shortest Distance Point = p(3, 3) */
