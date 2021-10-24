@@ -1,4 +1,5 @@
-package math;
+import java.io.*;
+import java.util.*;
 
 import java.util.Arrays;
 
@@ -67,3 +68,5 @@ public class MinimumPlatforms {
         System.out.println("Minimum Number of Platforms Required = " + findPlatform(arr, dep, n));
     }
 }
+
+/* Output: Minimum Number of Platforms Required = 3 */
