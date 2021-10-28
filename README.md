@@ -1142,60 +1142,41 @@ parameter to create the generic class of specific type. The T type indicates tha
 * <b>Design Pattern</b></br>
 Design pattern usually deals with object. Design Pattern is a general, reusable solution to a commonly occurring problem within a given context.
 
-Categories of design pattern:
-	1. 
-Creational design Pattern : How to create object
-	2. 
-Structural Design Pattern : How to compose object
-	3. 
-Behavioral Design  Pattern : How to coordinate object interactions
+* Categories of design pattern:
+	1. Creational design Pattern : How to create object
+	2. Structural Design Pattern : How to compose object
+	3. Behavioral Design  Pattern : How to coordinate object interactions
 
 
-Creational Design Pattern
-These design patterns are all about class instantiation. Creational patterns make object instantiation straightforward and repeatable. Some of these creational design pattern are :
-	1. 
-Builder pattern : Separates object construction from its representation.
-	2. 
-Singleton pattern : Only a single instance of a class should exist with a global access point
-	3. 
-Dependency Injection pattern : help to inject dependency object by creating from outside.
-	4. 
-Factory pattern : Creates an instance of several derived classes.
+* Creational Design Pattern
+	These design patterns are all about class instantiation. Creational patterns make object instantiation straightforward and repeatable. Some of these creational design pattern are :
+	1. Builder pattern : Separates object construction from its representation.
+	2. Singleton pattern : Only a single instance of a class should exist with a global access point
+	3. Dependency Injection pattern : help to inject dependency object by creating from outside.
+	4. Factory pattern : Creates an instance of several derived classes.
 
 
-Structural Design Pattern
-These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality. Some of these pattern are :
-	1. 
-Adapter pattern : Match interfaces of different classes.
-	2. 
-Facade pattern : A single class that represents an entire subsystem.
-	3. 
-Decorator pattern : Add responsibilities to objects dynamically.
-	4. 
-Composite pattern : A tree structure of simple and composite objects.
+* Structural Design Pattern
+	These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality. Some of these pattern are :
+	1. Adapter pattern : Match interfaces of different classes.
+	2. Facade pattern : A single class that represents an entire subsystem.
+	3. Decorator pattern : Add responsibilities to objects dynamically.
+	4. Composite pattern : A tree structure of simple and composite objects.
 
 
-Behavioral Design Pattern
-Behavioral design patterns are design patterns that identify common communication patterns between objects. Increase flexibility in carrying out this communication. Some of these pattern are :
-	1. 
-Observer pattern : A way of notifying change to a number of classes.
-	2. 
-Iterator pattern : Sequentially access the elements of a collection
-	3. 
-Command pattern : Encapsulate a command request as an object
-	4. 
-Strategy pattern : Encapsulates an algorithm inside a class
-	5. 
-State pattern : Alter an object's behaviour when its state changes
-	6. 
-Chain of responsibility : A way of passing a request between a chain of objects
+* Behavioral Design Pattern
+	Behavioral design patterns are design patterns that identify common communication patterns between objects. Increase flexibility in carrying out this communication. Some of these pattern are :
+	1. Observer pattern : A way of notifying change to a number of classes.
+	2. Iterator pattern : Sequentially access the elements of a collection
+	3. Command pattern : Encapsulate a command request as an object
+	4. Strategy pattern : Encapsulates an algorithm inside a class
+	5. State pattern : Alter an object's behaviour when its state changes
+	6. Chain of responsibility : A way of passing a request between a chain of objects
 
-
-
-Sources :
-Common Design Patterns and App Architectures for Android
-Mastering Design Patterns in Android with Kotlin
-Design pattern - sourcemaking.com
+* Sources :
+	Common Design Patterns and App Architectures for Android
+	Mastering Design Patterns in Android with Kotlin
+	Design pattern - sourcemaking.com
 </br>   
 </br>   
 </br>   
