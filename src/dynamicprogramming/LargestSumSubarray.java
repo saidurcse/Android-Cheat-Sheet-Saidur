@@ -19,6 +19,26 @@ public class LargestSumSubarray {
      * This is achieved by keeping a current maximum for the current array index and a global maximum.
      * */
 	
+   /*
+   This code handles negative numer also. So, this is proper code.
+   public static int maxSubArray(int[] nums) {
+    	
+    	int size = nums.length;
+        int maxSoFar = Integer.MIN_VALUE; 
+        int maxAtEnd = 0;
+ 
+        for (int i = 0; i < size; i++)
+        {
+        	maxAtEnd = maxAtEnd + nums[i];
+            if (maxSoFar < maxAtEnd)
+            	maxSoFar = maxAtEnd;
+            if (maxAtEnd < 0)
+            	maxAtEnd = 0;
+        }
+        return maxSoFar;
+    }
+    */
+	
     public static int getLargestSumFromArray(int[] arr) {
         int maxSoFar = 0;
         int maxAtEnd = 0;
