@@ -1142,13 +1142,13 @@ parameter to create the generic class of specific type. The T type indicates tha
 * <b>Design Pattern</b></br>
 Design pattern usually deals with object. Design Pattern is a general, reusable solution to a commonly occurring problem within a given context.
 
-* Categories of design pattern:
+	* Categories of design pattern:
 	1. Creational design Pattern : How to create object
 	2. Structural Design Pattern : How to compose object
 	3. Behavioral Design  Pattern : How to coordinate object interactions
 
 
-* Creational Design Pattern
+	* Creational Design Pattern
 	These design patterns are all about class instantiation. Creational patterns make object instantiation straightforward and repeatable. Some of these creational design pattern are :
 	1. Builder pattern : Separates object construction from its representation.
 	2. Singleton pattern : Only a single instance of a class should exist with a global access point
@@ -1156,7 +1156,7 @@ Design pattern usually deals with object. Design Pattern is a general, reusable 
 	4. Factory pattern : Creates an instance of several derived classes.
 
 
-* Structural Design Pattern
+	* Structural Design Pattern
 	These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality. Some of these pattern are :
 	1. Adapter pattern : Match interfaces of different classes.
 	2. Facade pattern : A single class that represents an entire subsystem.
@@ -1164,7 +1164,7 @@ Design pattern usually deals with object. Design Pattern is a general, reusable 
 	4. Composite pattern : A tree structure of simple and composite objects.
 
 
-* Behavioral Design Pattern
+	* Behavioral Design Pattern
 	Behavioral design patterns are design patterns that identify common communication patterns between objects. Increase flexibility in carrying out this communication. Some of these pattern are :
 	1. Observer pattern : A way of notifying change to a number of classes.
 	2. Iterator pattern : Sequentially access the elements of a collection
@@ -1173,10 +1173,70 @@ Design pattern usually deals with object. Design Pattern is a general, reusable 
 	5. State pattern : Alter an object's behaviour when its state changes
 	6. Chain of responsibility : A way of passing a request between a chain of objects
 
-* Sources :
-	Common Design Patterns and App Architectures for Android
-	Mastering Design Patterns in Android with Kotlin
-	Design pattern - sourcemaking.com
+
+* <b>SOLID principle</b></br>
+	The SOLID principles acronym was introduced by Michael Feathers for the principles that were defined by Robert C. Martin (Uncle Bob) in the early 2000s. In order to have a quality and robust code we should have a
+	* Low coupling
+	* High cohesion
+	* Strong encapsulation
+
+	These properties are achievable by applying in our code the SOLID principles, and for sure these rules could be included also in the Android development.
+
+	S.O.L.I.D stands for
+	* Single Responsibility Principle : A class should have only one reason to change.
+	* Open Close Principle : Software entities should be open for extension, but closed for modification.
+	* Liskov Substitutional Principle : Objects in a program should be replaceable with instances of their subtypes without changing the behaviour of that program.
+	* Interface Segregation Principle : Classes that implement interfaces, should not be forced to implement methods they do not use.
+	* Dependency Inversion Principle : High level modules should not depend on low level modules rather both should depend on abstraction. Abstraction should not depend on details; rather detail should depend on abstraction.
+
+
+* <b>Application Architecture Pattern</b></br>
+	There are common architecture pattern, such as MVC, MVP, MVVM. These are actually "code organizing" architectural design model. Benefits are below:
+	* Separation of concern
+	* No hard dependency
+	* Manage life cycle and data persistance
+	* Unit test
+
+
+* <b>Android Background Service</b></br>
+	Overview :
+	* Application component that can perform long run operation in the background.
+	* Does not provide any user interface
+	* Once stared, a service might continue running for some times, even after the use switches to another application.
+	* A component can bind to service to interact with it and even perform interprocess communication. A service can handle network transactions, play music, perform i/o interaction.
+
+
+	There are three different type of services.
+	* Foreground:
+	Perform some operation that is noticeable to the user. It must display a notification to aware user.  It continue running even the user isn't interacting with the app. Notification can not be dismiss unless the service is either stopped or removed from foreground.
+
+	* Background:
+	A Background service perform an operation that isn't directly noticed by the user. Notes : If your app targets API level 26 or higher, the system imposes restrictions on runningbackground services when the app itself isn't in the foreground.
+
+	* Bound:
+	A service is bound when an application component binds to it by calling bindService(). A bound service offers a client-server interface that allows components to interact with the service, send requests, receive results, and even do so across processes with interprocess communication (IPC). A bound service runs only as long as another application component is bound to it. Multiple components can bind to the service at once, but when all of them unbind, the service is destroyed.
+
+
+
+	Service run on main/ui thread by default. 
+
+	Some callback method whose are override when you create a service by extent Service class or use one of its existing subclass. Methods are :
+	* onStartCommand()
+	Invoke this method by calling startService() from others component. It's your responsibility to stop this by call stopSelf() or stopService(). No need to implement if you provide binding.
+
+	* onBind()
+	Invoke this method by calling bindService() when another component wants to bind with the service. Need IBinder for client communication. You must always implement this method; however, if you don't want to allow binding, you should return null.
+
+	* onCreate()
+	The system invokes this method to perform one-time setup procedures when the service is initially created (before it calls either onStartCommand() or onBind())
+
+	* onDestroy()
+	The system invokes this method when the service is no longer used and is being destroyed. Your service should implement this to clean up any resources such as threads, registered listeners, or receivers. This is the last call that the service receives.
+
+
+	The Android system stops a service only when memory is low and it must recover system resources for the activity that has user focus. If the service is bound to an activity that has user focus, it's less likely to be killed; if the service is declared to run in the foreground, it's rarely killed. If the service is started and is long-running, the system lowers its position in the list of background tasks over time, and the service becomes highly susceptible to killing—if your service is started, you must design it to gracefully handle restarts by the system. If the system kills your service, it restarts it as soon as resources become available, but this also depends on the value that you return from onStartCommand()
+
+	IntentService: Subclass of Service  that uses a worker thread to handle all of the start requests one at a time. Now recommended in new apps for background execution limits. JobIntentService is replacement of IntentService.
 </br>   
 </br>   
 </br>   
