@@ -3,6 +3,27 @@ import java.util.*;
 
 public class IntersectionPoints {
 
+    /*ListNode p1, p2;
+        p1 = headA;
+        p2 = headB;
+        while (p1 != p2) {
+            if (p1 == null) {
+                p1 = headB;
+            } else {
+                p1 = p1.next;
+            }
+            if (p2 == null) {
+                p2 = headA;
+            } else {
+                p2 = p2.next;
+            }
+        }
+        if (p1 == null) {
+            return null;
+        }
+        return p1;
+    */
+	
     /*
      * Given head nodes of two linked lists that may or may not intersect,
      * find out if they intersect and return the point of intersection;
