@@ -30,6 +30,8 @@ public class MergeLinkedList {
             return head1;
         }
 
+	/* Compare the data of the two lists whichever lists' data is smaller,
+	append it into tail and advance the head to the next Node */
         LinkedList.Node mergedHead = null;
         if (head1.data <= head2.data) {
             mergedHead = head1;
@@ -41,6 +43,8 @@ public class MergeLinkedList {
 
         LinkedList.Node mergedTail = mergedHead;
 
+	/* Compare the data of the two lists whichever lists' data is smaller,
+	append it into tail and advance the head to the next Node */
         while (head1 != null && head2 != null) {
             LinkedList.Node temp = null;
             if (head1.data <= head2.data) {
@@ -51,6 +55,7 @@ public class MergeLinkedList {
                 head2 = head2.next;
             }
 
+	    /* Advance the tail */
             mergedTail.next = temp;
             mergedTail = temp;
         }
