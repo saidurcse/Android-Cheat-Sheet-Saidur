@@ -12,6 +12,22 @@ public class RemoveDuplicates {
      * Linear, O(n) - to store nodes in hashset.
      * */
 
+    /*
+    ListNode prev = null;
+		ListNode curr = head;
+		HashSet<Integer> set = new HashSet<Integer>();
+		while(curr != null){
+			if(set.contains(curr.val)){
+				prev.next = curr.next;
+			}else{
+				set.add(curr.val);
+				prev = curr;
+			}
+			curr = curr.next;
+		}
+		return head;
+    */
+    
     public static class LinkedList {
 
         private Node head;
