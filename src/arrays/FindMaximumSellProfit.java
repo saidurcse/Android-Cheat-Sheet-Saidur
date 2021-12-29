@@ -1,5 +1,6 @@
 import java.io.*;
-import com.sun.tools.javac.util.Pair;
+import java.util.*;
+import javafx.util.Pair;
 
 public class FindMaximumSellProfit {
 
@@ -24,7 +25,7 @@ public class FindMaximumSellProfit {
     */
 
     public static int findMaximumProfit(int[] stockPrices) {
-        int minimumPrice = Integer.MAX_VALUE;
+        int minimumPrice = Integer.MAX_VALUE; // 2147483647
         int maxProfit = 0;
 
         /*
