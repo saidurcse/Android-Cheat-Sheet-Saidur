@@ -18,26 +18,26 @@ public class NextHighestPermutation {
         int n = c.length;
         for(int i=n-1; i>0; i--) {
             if(c[i] > c[i-1]) {
-                a = i;
+                a = i; // 3
                 break;
             }
         }
 
         if(a == 0) return "No permutations";
 
-        int num = c[a-1];
-        int min = a;
+        int num = c[a-1]; // 98
+        int min = a; // 3
         for(int i=a+1; i<n; i++) {
             if(c[i] > num && c[i] < c[min]) {
                 min = i;
             }
         }
 
-        char temp = c[min];
+        char temp = c[min]; // temp = "c"
         c[min] = c[a-1];
-        c[a-1] = temp;
+        c[a-1] = temp; // abcb -> exchanging c with b
 
-        return new String(c);
+        return new String(c); 
     }
     
     public static void main(String[] args) {
