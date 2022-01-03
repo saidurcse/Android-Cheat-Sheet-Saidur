@@ -5,7 +5,8 @@ import javafx.util.Pair;
 public class CheckIfAnagram {
 
     /*
-     * Input: "Keep", "Peek"
+     * An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+     * Input: "Keep", "Peek" 
      * Output: false
      * */
     
