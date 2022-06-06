@@ -10,9 +10,16 @@ https://github.com/anitaa1990/Android-Cheat-sheet
 * [Android Interview Questions](#android-interview-questions)
 * [Java Interview Questions](#java-interview-questions)
 </br>
-
 ## Programming Tutorial Link
-* https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
+* http://www.shafaetsplanet.com/?p=1313
+* http://www.shafaetsplanet.com/?p=2911
+* http://www.shafaetsplanet.com/?p=2689
+* http://www.shafaetsplanet.com/?p=2342
+* http://www.shafaetsplanet.com/planetcoding/?p=1266
+* http://www.shafaetsplanet.com/?p=143 (Bacis)
+* http://www.shafaetsplanet.com/?p=184 (Variable Graph Store-1)
+* http://www.shafaetsplanet.com/planetcoding/?p=211 (Variable Graph Store-2)
+* http://www.shafaetsplanet.com/planetcoding/?p=604 (BFS Algorithm)
 
 ### Common Coding Programs
 * <b>Arrays</b></br>
