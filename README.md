@@ -9,7 +9,6 @@ https://github.com/anitaa1990/Android-Cheat-sheet
 * [Data Structure Coding Programs](#data-structure-coding-programs)
 * [Android Interview Questions](#android-interview-questions)
 * [Java Interview Questions](#java-interview-questions)
-</br>
 
 ## Programming Tutorial Link
 * http://www.shafaetsplanet.com/?p=1313
