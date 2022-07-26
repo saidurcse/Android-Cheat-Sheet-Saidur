@@ -11,11 +11,11 @@ https://github.com/anitaa1990/Android-Cheat-sheet
 * [Java Interview Questions](#java-interview-questions)
 
 ## Programming Tutorial Link
-* http://www.shafaetsplanet.com/?p=1313
-* http://www.shafaetsplanet.com/?p=2911
-* http://www.shafaetsplanet.com/?p=2689
-* http://www.shafaetsplanet.com/?p=2342
-* http://www.shafaetsplanet.com/planetcoding/?p=1266
+* http://www.shafaetsplanet.com/?p=1313 (Algorithm Complexity (Big"O" Notation))
+* http://www.shafaetsplanet.com/?p=2911 (Queue and Circular Queue)
+* http://www.shafaetsplanet.com/?p=2689 (Linked List)
+* http://www.shafaetsplanet.com/?p=2342 (Stack)
+* http://www.shafaetsplanet.com/planetcoding/?p=1266 (Backtracking)
 * http://www.shafaetsplanet.com/?p=143 (Bacis)
 * http://www.shafaetsplanet.com/?p=184 (Variable Graph Store-1)
 * http://www.shafaetsplanet.com/planetcoding/?p=211 (Variable Graph Store-2)
