@@ -1246,7 +1246,9 @@ Design pattern usually deals with object. Design Pattern is a general, reusable 
 	The Android system stops a service only when memory is low and it must recover system resources for the activity that has user focus. If the service is bound to an activity that has user focus, it's less likely to be killed; if the service is declared to run in the foreground, it's rarely killed. If the service is started and is long-running, the system lowers its position in the list of background tasks over time, and the service becomes highly susceptible to killing—if your service is started, you must design it to gracefully handle restarts by the system. If the system kills your service, it restarts it as soon as resources become available, but this also depends on the value that you return from onStartCommand()
 
 	IntentService: Subclass of Service  that uses a worker thread to handle all of the start requests one at a time. Now recommended in new apps for background execution limits. JobIntentService is replacement of IntentService.
-</br>   
+	
+* <b>Kotlin Coroutine</b></br>
+Conceptually, Coroutine is similar to thread, super light weight thread, not bound to any thread.  Actually Coroutines are not threads. They are a low-level mechanism that utilizes thread pools to shuffle work between multiple, existing threads. This allows you to create millions of coroutines, without overflowing memory. A million threads would take so much memory, even today’s state-of-the-art computers would crash. Like as thread, Coroutine have same life.</br>   
 </br>   
 </br>   
       
