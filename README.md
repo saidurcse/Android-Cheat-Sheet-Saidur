@@ -676,21 +676,45 @@ savedInstanceState.Also it won't affect the performance even if there are large 
    
    
 * <b>Android Architecture Components?</b></br>
-   * A collection of libraries that help you design robust, testable, and maintainable apps. [Official documentation](https://developer.android.com/topic/libraries/architecture/)
+   * A collection of libraries/Android software components that help you design robust, testable, and maintainable apps. [Official documentation](https://developer.android.com/topic/libraries/architecture/)
       * <b>Room</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/room)   
         [Article on how to implement Room Db](https://medium.com/@anitaa_1990/5-steps-to-implement-room-persistence-library-in-android-47b10cd47b24)  
         [Sample  implementation](https://github.com/anitaa1990/RoomDb-Sample)
+The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Why use Room?    a) Compile-time verification of SQL queries. each @Query and @Entity is checked at the compile time, that preserves your app from crash issues at runtime and not only it checks the only syntax, but also missing tables. b) Boilerplate code c) Easily integrated with other Architecture components (like LiveData) 
         
       * <b>Live Data</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/livedata)   
         [Sample  implementation](https://github.com/anitaa1990/GameOfThronesTrivia)
+LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
+
+LiveData considers an observer, which is represented by the Observer class, to be in an active state if its lifecycle is in the STARTED or RESUMED state. LiveData only notifies active observers about updates. Inactive observers registered to watch LiveData objects aren't notified about changes.
+
+You can register an observer paired with an object that implements the LifecycleOwner interface. This relationship allows the observer to be removed when the state of the corresponding Lifecycle object changes to DESTROYED. This is especially useful for activities and fragments because they can safely observe LiveData objects and not worry about leaks—activities and fragments are instantly unsubscribed when their lifecycles are destroyed.
+
+The advantages of using LiveData:
+-> Ensures your UI matches your data state
+-> No memory leaks
+-> No crashes due to stopped activities
+-> No more manual lifecycle handling
+-> Always up to date data
+-> Proper configuration changes
+-> Sharing resources
         
       * <b>ViewModel</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/viewmodel)   
         [Sample  implementation](https://github.com/anitaa1990/GameOfThronesTrivia)
+The ViewModel class is a business logic or screen level state holder. It exposes state to the UI and encapsulates related business logic. Its principal advantage is that it caches state and persists it through configuration changes. This means that your UI doesn’t have to fetch data again when navigating between activities, or following configuration changes, such as when rotating the screen.
+
+ViewModel benefits:
+The alternative to a ViewModel is a plain class that holds the data you display in your UI. This can become a problem when navigating between activities or Navigation destinations. Doing so destroys that data if you don't store it using the saving instance state mechanism. ViewModel provides a convenient API for data persistence that resolves this issue.The key benefits of the ViewModel class are essentially two fold:
+-> It allows you to persist UI state.
+-> It provides access to business logic.
+
         
       * <b>Data Binding</b> - [Official documentation](https://developer.android.com/topic/libraries/data-binding/)   
-        [Sample  implementation](https://github.com/anitaa1990/DataBindingExample)        
+        [Sample  implementation](https://github.com/anitaa1990/DataBindingExample)
+The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.        
         
       * <b>Lifecycles</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/lifecycle)
+An Android activity goes through six major lifecycle stages or callbacks. These are: onCreate() , onStart() , onResume() , onPause() , onStop() , and onDestroy() . The system invokes each of these callbacks as an activity enters a new state.
   </br> 
   
   
@@ -1248,7 +1272,14 @@ Design pattern usually deals with object. Design Pattern is a general, reusable 
 	IntentService: Subclass of Service  that uses a worker thread to handle all of the start requests one at a time. Now recommended in new apps for background execution limits. JobIntentService is replacement of IntentService.
 	
 * <b>Kotlin Coroutine</b></br>
-Conceptually, Coroutine is similar to thread, super light weight thread, not bound to any thread.  Actually Coroutines are not threads. They are a low-level mechanism that utilizes thread pools to shuffle work between multiple, existing threads. This allows you to create millions of coroutines, without overflowing memory. A million threads would take so much memory, even today’s state-of-the-art computers would crash. Like as thread, Coroutine have same life.</br>   
+A framework to manage concurrency in a more performant and simple way with its lightweight thread which is written on top of the actual threading framework to get the most out of it by taking the advantage of cooperative nature of functions.
+
+Suspend function is the building block of the Coroutines in Kotlin. Suspend function is a function that could be started, paused, and resume. To use a suspend function, we need to use the suspend keyword in our normal function definition.
+
+-> launch: fire and forget
+-> async: perform a task and return a result
+
+They are a low-level mechanism that utilizes thread pools to shuffle work between multiple, existing threads. This allows you to create millions of coroutines, without overflowing memory.</br>   
 </br>   
 </br>   
       
