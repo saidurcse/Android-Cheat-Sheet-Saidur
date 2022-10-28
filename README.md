@@ -677,12 +677,14 @@ savedInstanceState.Also it won't affect the performance even if there are large 
    
 * <b>Android Architecture Components?</b></br>
    * A collection of libraries/Android software components that help you design robust, testable, and maintainable apps. [Official documentation](https://developer.android.com/topic/libraries/architecture/)
-      * <b>Room</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/room)   
+      * <b>Room</b></br>
+        [Official documentation](https://developer.android.com/topic/libraries/architecture/room)   
         [Article on how to implement Room Db](https://medium.com/@anitaa_1990/5-steps-to-implement-room-persistence-library-in-android-47b10cd47b24)  
         [Sample  implementation](https://github.com/anitaa1990/RoomDb-Sample)
 The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Why use Room?    a) Compile-time verification of SQL queries. each @Query and @Entity is checked at the compile time, that preserves your app from crash issues at runtime and not only it checks the only syntax, but also missing tables. b) Boilerplate code c) Easily integrated with other Architecture components (like LiveData) 
         
-      * <b>Live Data</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/livedata)   
+      * <b>Live Data</b></br>
+        [Official documentation](https://developer.android.com/topic/libraries/architecture/livedata)   
         [Sample  implementation](https://github.com/anitaa1990/GameOfThronesTrivia)
 LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
 
@@ -699,7 +701,8 @@ The advantages of using LiveData:
 -> Proper configuration changes
 -> Sharing resources
         
-      * <b>ViewModel</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/viewmodel)   
+      * <b>ViewModel</b></br> 
+        [Official documentation](https://developer.android.com/topic/libraries/architecture/viewmodel)   
         [Sample  implementation](https://github.com/anitaa1990/GameOfThronesTrivia)
 The ViewModel class is a business logic or screen level state holder. It exposes state to the UI and encapsulates related business logic. Its principal advantage is that it caches state and persists it through configuration changes. This means that your UI doesn’t have to fetch data again when navigating between activities, or following configuration changes, such as when rotating the screen.
 
@@ -707,13 +710,14 @@ ViewModel benefits:
 The alternative to a ViewModel is a plain class that holds the data you display in your UI. This can become a problem when navigating between activities or Navigation destinations. Doing so destroys that data if you don't store it using the saving instance state mechanism. ViewModel provides a convenient API for data persistence that resolves this issue.The key benefits of the ViewModel class are essentially two fold:
 -> It allows you to persist UI state.
 -> It provides access to business logic.
-
         
-      * <b>Data Binding</b> - [Official documentation](https://developer.android.com/topic/libraries/data-binding/)   
+      * <b>Data Binding</b></br> 
+        [Official documentation](https://developer.android.com/topic/libraries/data-binding/)   
         [Sample  implementation](https://github.com/anitaa1990/DataBindingExample)
 The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.        
         
-      * <b>Lifecycles</b> - [Official documentation](https://developer.android.com/topic/libraries/architecture/lifecycle)
+      * <b>Lifecycles</b></br>
+        [Official documentation](https://developer.android.com/topic/libraries/architecture/lifecycle)
 An Android activity goes through six major lifecycle stages or callbacks. These are: onCreate() , onStart() , onResume() , onPause() , onStop() , and onDestroy() . The system invokes each of these callbacks as an activity enters a new state.
   </br> 
   
@@ -725,6 +729,8 @@ An Android activity goes through six major lifecycle stages or callbacks. These 
 
 
 * <b>RXJava - What is it?</b>
+   * https://blog.mindorks.com/rxjava-for-android-rxandroid
+   * Benefit of RxJava - https://www.quora.com/What-are-some-of-the-benefits-of-using-RxAndroid
    * [RxJava - Basics, Types of Operators, Types of Observables - Article](https://medium.com/@anitaa_1990/exploring-rxjava-in-android-e52ed7ef32e2)
    * [RxJava - Basics, Types of Operators, Types of Observables - Sample Implementation](https://github.com/anitaa1990/RxAndroid-Sample)
    
