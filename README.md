@@ -16,7 +16,7 @@ https://github.com/anitaa1990/Android-Cheat-sheet
 * http://www.shafaetsplanet.com/?p=2689 (Linked List)
 * http://www.shafaetsplanet.com/?p=2342 (Stack)
 * http://www.shafaetsplanet.com/planetcoding/?p=1266 (Backtracking)
-* http://www.shafaetsplanet.com/?p=143 (Bacis)
+* http://www.shafaetsplanet.com/?p=143 (Basic Graph Theory)
 * http://www.shafaetsplanet.com/?p=184 (Variable Graph Store-1)
 * http://www.shafaetsplanet.com/planetcoding/?p=211 (Variable Graph Store-2)
 * http://www.shafaetsplanet.com/planetcoding/?p=604 (BFS Algorithm)
