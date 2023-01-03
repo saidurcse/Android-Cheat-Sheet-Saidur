@@ -855,7 +855,7 @@ An Android activity goes through six major lifecycle stages or callbacks. These 
    * Polymorphism is a characteristic of being able to assign a different meaning or usage to something in different contexts - specifically, to allow an entity such as a variable, a function, or an object to have more than one form.
    * 2 forms of polymorphism:  
        * Compile time polymorphism: The flow of control is decided during the compile time itself. By overloading.
-       * Run time polymorphism: is done using inheritance and interface. The flow of control is decided during the runtime. Overriding: Overriding will have the same method name with the same parameters. One will be the parent class method and the other will be the child class method. Overloading occurs when the same method name is declared but with different parameters.</br>
+       * Run time polymorphism: The flow of control is decided during the runtime. Overriding: Overriding will have the same method name with the same parameters. One will be the parent class method and the other will be the child class method. Overloading occurs when the same method name is declared but with different parameters.</br>
        
        
 * <b>What is Method overloading?</b></br>
