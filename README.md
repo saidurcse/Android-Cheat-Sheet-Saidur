@@ -924,6 +924,7 @@ class Employee {
    
    
 * <b>What is the difference between instantiation and initialization of an object?</b></br>
+   * <b>Instantiation: The new keyword is a Java operator that creates the object. Initialization: The new operator is followed by a call to a constructor, which initializes the new object.</b>
    * <b>Initialization</b> is the process of the memory allocation, when a new variable is created. Variables should be explicitly given a value, otherwise they may contain a random value that remained from the previous variable that was using the same memory space. To avoid this problem, Java language assigns default values to data types.
    * <b>Instantiation</b> is the process of explicitly assigning definitive value to a declared variable.</br>
    
